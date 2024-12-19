@@ -4,38 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/ClubDb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/MemberDb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/manager/ClubManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/manager/MembersManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/Club.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/HR/ExecutiveOffice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/HR/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Views/ViewFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/Admin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/User/User.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/loginDesign.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/managerDesign.css" afterDir="false" />
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="first commit : login/register and manager controll and database all set">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/managerDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/managerDesign.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +29,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SHOW_RECENT_BRANCHES" value="false" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;khalil-nouisse&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/khalil-nouisse/Clubs_Manager.git&quot;,
+    &quot;accountId&quot;: &quot;aacc28d0-7c28-4d1d-bdf9-d96761616abd&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/3791200d-e88d-425b-8973-42136fdafab4_hash_tables_assignment.zip.ab4/hash_tables_assignment/src/main/java/ma/ac/ensam/ilsi/StaticHashTable.java" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/ae85709b-9024-4816-b086-5690a49f122a_hash_tables_assignment.zip.22a/hash_tables_assignment/src/main/java/ma/ac/ensam/ilsi/HashTable.java" root0="SKIP_INSPECTION" />
@@ -96,7 +83,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -147,11 +134,53 @@
       <workItem from="1734021368456" duration="9735000" />
       <workItem from="1734100202402" duration="7649000" />
       <workItem from="1734108720177" duration="7374000" />
+      <workItem from="1734125149134" duration="2316000" />
+      <workItem from="1734183143045" duration="612000" />
+      <workItem from="1734288646891" duration="76000" />
+      <workItem from="1734428900052" duration="8552000" />
+      <workItem from="1734532472225" duration="55000" />
+      <workItem from="1734570524173" duration="1420000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
+      <option name="closed" value="true" />
+      <created>1734126982397</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734126982397</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit : login/register and manager controll and database all set" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit : login/register and manager controll and database all set" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

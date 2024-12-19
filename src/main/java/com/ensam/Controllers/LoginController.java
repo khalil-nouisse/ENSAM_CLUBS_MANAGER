@@ -21,7 +21,7 @@ import javafx.event.ActionEvent;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.ensam.Controllers.Admin.ManagerPageController;
 
 public class LoginController {
     @FXML
@@ -63,6 +63,7 @@ public class LoginController {
     @FXML
     private Button side_alreadyHave;
 
+    ManagerPageController  managerpage = new ManagerPageController();
 
     // ----------------- connection interface backend/database ------------------
     MemberDb memberDb = new MemberDb();
@@ -86,6 +87,7 @@ public class LoginController {
                     alert.setHeaderText(null);
                     alert.setContentText("Succesfully Login !");
                     alert.showAndWait();
+
 
 
                     // Load the MainInterface.fxml

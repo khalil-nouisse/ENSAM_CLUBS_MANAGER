@@ -1,18 +1,19 @@
 package com.ensam.Controllers.Admin;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.net.URL;
+import java.util.*;
 
 
 public class ManagerPageController {
@@ -63,41 +64,84 @@ public class ManagerPageController {
     @FXML
     private Button signout_btn;
 
+    @FXML
+    private ComboBox<?> manager_add_clubCategory;
+
+    @FXML
+    private TextField manager_add_clubDescription;
+
+    @FXML
+    private TextField manager_add_clubName;
+
+    @FXML
+    private ComboBox<?> manager_add_clubState;
+
     Alert alert;
+    private String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
+    public void inventoryTypeList(){
+        List<String> categoryL = new ArrayList<>() ;
+        /*for(String data : categoryList){
+            categoryL.add(data);*/
+
+        Collections.addAll(categoryL ,categoryList);
+        ObservableList category = FXCollections.observableArrayList(categoryL);
+        manager_add_clubCategory.setItems(category);
+
+    }
+
     public void logout(ActionEvent event){
+
         try{
+
             //logout confirmation
             alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("CONFIRMATION");
-            alert.setHeaderText(null);
-            alert.setContentText("Are you sure you want to logout?");
-            alert.showAndWait();
+            alert.setHeaderText("Sign Out Confirmation");
+            alert.setContentText("Are you sure you want to sign out?");
 
-            //after logout confirmation go back to login page!
-            // Load the MainInterface.fxml
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
-            Parent mainInterfaceRoot = loader.load();
+            //controle the choice of the user !
 
-            // Get the current stage from the event source
-            Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            Optional<ButtonType> option = alert.showAndWait() ;
 
-            // Set the new scene
-            Scene mainScene = new Scene(mainInterfaceRoot);
-            currentStage.setScene(mainScene);
+            if(option.get().equals(ButtonType.OK)){
 
-            // Resize the stage to fit the new scene
-            currentStage.sizeToScene();
-            currentStage.setMinWidth(600);
-            currentStage.setMinHeight(400);
-            currentStage.setMaxWidth(600);
-            currentStage.setMaxHeight(400);
 
-            // Show the updated stage
-            currentStage.show();
+
+                //after logout confirmation go back to login page!
+
+                // Load the MainInterface.fxml
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+                Parent mainInterfaceRoot = loader.load();
+
+                // Get the current stage from the event source
+                Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+                // Set the new scene
+                Scene mainScene = new Scene(mainInterfaceRoot);
+                currentStage.setTitle("CLUBS MANAGER");
+                currentStage.setScene(mainScene);
+
+                // Resize the stage to fit the new scene
+                currentStage.sizeToScene();
+                currentStage.setMinWidth(600);
+                currentStage.setMinHeight(400);
+                currentStage.setMaxWidth(600);
+                currentStage.setMaxHeight(400);
+
+                // Show the updated stage
+                currentStage.show();
+            }
+
+            //User clicked No.wants to stay logged in
 
 
         }catch (Exception e){
             e.printStackTrace();
         }
     }
+    /*public void initialize(URL location , ResourceBundle resources){
+        //inventoryTypeList();
+    }*/
+
+
 }
