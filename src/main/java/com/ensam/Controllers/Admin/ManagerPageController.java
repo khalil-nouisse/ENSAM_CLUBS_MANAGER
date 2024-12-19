@@ -1,5 +1,7 @@
 package com.ensam.Controllers.Admin;
 
+import com.ensam.Backend.database.CLubDb;
+import com.ensam.Backend.model.Club;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -16,7 +19,7 @@ import java.net.URL;
 import java.util.*;
 
 
-public class ManagerPageController {
+public class ManagerPageController implements Initializable {
 
 
     @FXML
@@ -50,7 +53,7 @@ public class ManagerPageController {
     private TableColumn<?, ?> manager_club_state;
 
     @FXML
-    private TableView<?> manager_club_table;
+    private TableView<Club> manager_club_table;
 
     @FXML
     private Button manager_delBtn;
@@ -76,19 +79,73 @@ public class ManagerPageController {
     @FXML
     private ComboBox<?> manager_add_clubState;
 
-    Alert alert;
-    private String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
-    public void inventoryTypeList(){
-        List<String> categoryL = new ArrayList<>() ;
-        /*for(String data : categoryList){
-            categoryL.add(data);*/
+    @FXML
+    private ImageView manager_add_image;
 
+    Alert alert;
+    CLubDb clubDb = new CLubDb();
+
+    private String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
+    public void setManager_club_category(){
+        List<String> categoryL = new ArrayList<>() ;
         Collections.addAll(categoryL ,categoryList);
         ObservableList category = FXCollections.observableArrayList(categoryL);
         manager_add_clubCategory.setItems(category);
 
     }
+    private String []stateListe = {"Active" ,"Inactive "} ;
+    public void setManager_club_state(){
+        List <String> stateL = new ArrayList<>() ;
+        Collections.addAll(stateL , stateListe);
+        ObservableList state = FXCollections.observableArrayList(stateL);
+        manager_add_clubState.setItems(state);
+    }
 
+    public void managerAddClub(ActionEvent event){
+
+
+        if(manager_add_clubName.getText().isEmpty()
+                || manager_add_clubCategory.getSelectionModel().isEmpty()
+                || manager_add_clubState.getSelectionModel().isEmpty()
+                || manager_add_clubDescription.getText().isEmpty()){
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Please fill all club informations");
+            alert.showAndWait();
+        }
+        else{
+            try {
+
+               clubDb.saveClubToDatabase(manager_add_clubName.getText()
+                        ,(String) manager_add_clubCategory.getSelectionModel().getSelectedItem()
+                        ,(String)manager_add_clubState.getSelectionModel().getSelectedItem()
+                        ,manager_add_clubDescription.getText()  );
+
+                alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Information Message");
+                alert.setHeaderText(null);
+                alert.setContentText("Succesfully added club!");
+                alert.showAndWait();
+
+                // Reload the clubs table data
+                loadClubs();
+
+                //initialize the data boxes
+                manager_add_clubName.setText("");
+                manager_add_clubCategory.getSelectionModel().clearSelection();
+                manager_add_clubState.getSelectionModel().clearSelection();
+                manager_add_clubDescription.setText("");
+
+            }
+            catch (Exception e){
+                System.out.println("Error adding club to database!");
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //Sign out button
     public void logout(ActionEvent event){
 
         try{
@@ -139,9 +196,23 @@ public class ManagerPageController {
             e.printStackTrace();
         }
     }
-    /*public void initialize(URL location , ResourceBundle resources){
-        //inventoryTypeList();
-    }*/
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        //ObservableList<Club> clubList = FXCollections.observableArrayList();
+
+        setManager_club_category();
+        setManager_club_state();
+
+        //clubDb.loadClubsFromDatabase(clubList);
+        loadClubs();
+    }
+    private void loadClubs() {
+        // Fetch the data from ClubDb and set it to the TableView
+        //bservableList<Club> clubs = clubDb.loadClubsFromDatabase();
+        //manager_club_table.setItems(clubs);
+        manager_club_table.setItems(clubDb.loadClubsFromDatabase());
+    }
 
 }

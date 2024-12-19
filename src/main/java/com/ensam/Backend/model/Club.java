@@ -10,7 +10,7 @@ public class Club {
     private String clubName ;
     private String clubCategory ;
     private int MembersNumber ;
-    private boolean clubState; //actif or not
+    private String clubState; //actif or not
     private long clubScore ;        //to delete
     private String clubDescription ;
     private ArrayList<String> ClubEvent ;
@@ -19,12 +19,25 @@ public class Club {
 
     //constructor
     public Club(){
-        clubState = true;
+        clubState = "Active";
         clubScore = 0;
         clubDescription = "null";
 
     }
-    public Club(long clubID ,String clubName, String clubCategory, int clubMembers, boolean clubState) {
+    public Club(String clubName , String clubCategory , String clubState , String clubDescription){
+        this.clubName = clubName ;
+        this.clubCategory = clubCategory ;
+        this.clubState = clubState ;
+        this . clubDescription = clubDescription ;
+    }
+    public Club(long clubId ,String clubName , String clubCategory , String clubState , String clubDescription){
+        this.clubId = clubId;
+        this.clubName = clubName ;
+        this.clubCategory = clubCategory ;
+        this.clubState = clubState ;
+        this . clubDescription = clubDescription ;
+    }
+    public Club(long clubID ,String clubName, String clubCategory, int clubMembers, String clubState) {
         this.clubId = clubID ;
         this.clubName = clubName ;
         this.clubCategory = clubCategory ;
@@ -60,7 +73,7 @@ public class Club {
         return members  ;
     }
 
-    public boolean isClubState() {
+    public String isClubState() {
         return clubState;
     }
 
@@ -94,7 +107,7 @@ public class Club {
         this.MembersNumber = clubMembers;
     }
 
-    public void setClubState(boolean clubState) {
+    public void setClubState(String clubState) {
         this.clubState = clubState;
     }
 
@@ -112,40 +125,22 @@ public class Club {
     //display !
     @Override
     public String toString(){
-        String S ;
-        if(clubState == true){
-            S = "actif";
-        }
-        else{
-            S = "inactif";
-        }
-        return S+"ID = "+ clubId
+        return "ID = "+ clubId
                 +"\nClub Name: "+ clubName
                 +"\nCategory : "+ clubCategory
                 +"\nmembers  : "+ MembersNumber
-                +"\nstate    : "+ S
+                +"\nstate    : "+ clubState
                 +"\nScore    : "+ clubScore ;
     }
     public void displayClub(){
-        String S ;
-        if(clubState == true){
-            S = "actif";
-        }
-        else{
-            S = "inactif";
-        }
         System.out.println(
                 "ID = "+ clubId
                         +"\nClub Name: "+ clubName
                         +"\nCategory : "+ clubCategory
                         +"\nmembers  : "+ MembersNumber
-                        +"\nstate    : "+ S
+                        +"\nstate    : "+ clubState
                         +"\nScore    : "+ clubScore);
     }
-    /*public void addMembersFromManager(Member[] membersList) {
-        for (int i = 0; i < membersList.length; i++) {
-                members[clubMembers +i+1] = membersList[i];  // Copy member from MembersManager to club
-            }
-        }*/
+
 }
 

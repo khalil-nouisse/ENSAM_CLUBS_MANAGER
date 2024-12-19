@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="first commit : login/register and manager controll and database all set">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/CLubDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/ClubDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/ClubDbold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/Club.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/managerDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/managerDesign.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +23,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -139,7 +141,8 @@
       <workItem from="1734288646891" duration="76000" />
       <workItem from="1734428900052" duration="8552000" />
       <workItem from="1734532472225" duration="55000" />
-      <workItem from="1734570524173" duration="1420000" />
+      <workItem from="1734570524173" duration="3689000" />
+      <workItem from="1734600984981" duration="7950000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -149,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734126982397</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commit : login/register and manager controll and database all set">
+      <option name="closed" value="true" />
+      <created>1734571999884</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734571999884</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +192,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit : login/register and manager controll and database all set" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit : login/register and manager controll and database all set" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

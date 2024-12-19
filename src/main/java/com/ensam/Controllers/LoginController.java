@@ -152,7 +152,7 @@ public class LoginController {
                         alert.setContentText("the username ' "+su_username.getText() + " ' is already taken !");
                         alert.showAndWait();
                     }
-                    else if(value == 2){    // password is shor (less than 3 characters
+                    else if(value == 2){    // password is short (less than 3 characters)
                         alert = new Alert(Alert.AlertType.ERROR);
                         alert.setTitle("Error Message");
                         alert.setHeaderText(null);
