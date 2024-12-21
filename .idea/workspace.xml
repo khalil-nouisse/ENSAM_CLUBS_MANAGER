@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="first commit : login/register and manager controll and database all set&#10;&#10;tableview for clubs is updated each time" />
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="update : tableview for clubs show off succcesfully">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +139,7 @@
       <workItem from="1734600984981" duration="9748000" />
       <workItem from="1734628829945" duration="380000" />
       <workItem from="1734731403570" duration="3147000" />
-      <workItem from="1734779539662" duration="5069000" />
+      <workItem from="1734779539662" duration="6403000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -171,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734784666857</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update : tableview for clubs show off succcesfully">
+      <option name="closed" value="true" />
+      <created>1734784849378</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734784849378</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +213,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit : login/register and manager controll and database all set" />
     <MESSAGE value="first commit : login/register and manager controll and database all set&#10;&#10;tableview for clubs is updated each time" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit : login/register and manager controll and database all set&#10;&#10;tableview for clubs is updated each time" />
+    <MESSAGE value="update : tableview for clubs show off succcesfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="update : tableview for clubs show off succcesfully" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
