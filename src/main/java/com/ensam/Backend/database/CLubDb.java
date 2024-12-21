@@ -77,7 +77,7 @@ public class CLubDb {
         return clubs;
         }*/
 
-    public ObservableList<Club> loadClubsFromDatabase() {
+    /*public ObservableList<Club> loadClubsFromDatabase() {
         String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
         String username = "root";
         String password = ""; //
@@ -109,6 +109,70 @@ public class CLubDb {
         return clubList;
     }
 
+     */
+    private PreparedStatement prepare;
+    private Statement statement ;
+    private ResultSet result;
+
+    /*public ObservableList<Club> loadClubsFromDatabase(){
+
+        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
+        String username = "root";
+        String password = "";
+
+        String sql = "SELECT * FROM clubs";
+        ObservableList<Club> listData = FXCollections.observableArrayList();
+
+        try (Connection connect = DriverManager.getConnection(url, username, password)){
+
+                prepare = connect.prepareStatement(sql);
+                result = prepare.executeQuery();
+
+                Club club;
+                while (result.next()) {
+                    club = new Club(result.getLong("clubID")
+                            , result.getString("clubName")
+                            , result.getString("clubCategory")
+                            , result.getString("clubState")
+                            , result.getString("clubDescription"));
+                    listData.add(club);
+                }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return listData;
+    }*/
+
+    public ObservableList<Club> selectClubsFromDb(){
+
+        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
+        String username = "root";
+        String password = "";
+
+        ObservableList<Club> listData = FXCollections.observableArrayList();
+        String sql = "SELECT * FROM clubs";
+
+
+        try (Connection connect = DriverManager.getConnection(url, username, password);){
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+            Club club;
+            while (result.next()) {
+                club = new Club(result.getLong("clubID")
+                        , result.getString("clubName")
+                        , result.getString("clubCategory")
+                        , result.getString("clubState")
+                        , result.getString("clubDescription"));
+                listData.add(club);
+            }
+
+        }
+        catch (Exception e) {
+                e.printStackTrace();
+        }
+            return listData;
+
+    }
 
 
 }

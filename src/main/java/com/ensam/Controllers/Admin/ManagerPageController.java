@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -38,19 +39,19 @@ public class ManagerPageController implements Initializable {
     private Button manager_btn;
 
     @FXML
-    private TableColumn<?, ?> manager_club_category;
+    private TableColumn<Club,String> manager_club_category;
 
     @FXML
-    private TableColumn<?, ?> manager_club_description;
+    private TableColumn<Club,String> manager_club_description;
 
     @FXML
-    private TableColumn<?, ?> manager_club_id;
+    private TableColumn<Club,String> manager_club_id;
 
     @FXML
-    private TableColumn<?, ?> manager_club_name;
+    private TableColumn<Club,String> manager_club_name;
 
     @FXML
-    private TableColumn<?, ?> manager_club_state;
+    private TableColumn<Club,String> manager_club_state;
 
     @FXML
     private TableView<Club> manager_club_table;
@@ -85,6 +86,7 @@ public class ManagerPageController implements Initializable {
     Alert alert;
     CLubDb clubDb = new CLubDb();
 
+    // category list in the manager page !
     private String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
     public void setManager_club_category(){
         List<String> categoryL = new ArrayList<>() ;
@@ -93,6 +95,8 @@ public class ManagerPageController implements Initializable {
         manager_add_clubCategory.setItems(category);
 
     }
+
+    //state list in the manager page
     private String []stateListe = {"Active" ,"Inactive "} ;
     public void setManager_club_state(){
         List <String> stateL = new ArrayList<>() ;
@@ -101,6 +105,27 @@ public class ManagerPageController implements Initializable {
         manager_add_clubState.setItems(state);
     }
 
+    // ***************************************************************************88
+
+
+    //trying to show off the manager page table
+    private ObservableList<Club> managerListData ;
+    public void managerShowData(){
+
+        managerListData = clubDb.selectClubsFromDb();
+
+        manager_club_id.setCellValueFactory(new PropertyValueFactory<>("clubId"));
+        manager_club_name.setCellValueFactory(new PropertyValueFactory<>("clubName"));
+        manager_club_category.setCellValueFactory(new PropertyValueFactory<>("clubCategory"));
+        manager_club_state.setCellValueFactory(new PropertyValueFactory<>("clubState"));
+        manager_club_description.setCellValueFactory(new PropertyValueFactory<>("clubDescription"));
+
+
+        manager_club_table.setItems(managerListData);
+    }
+
+
+    //add club button
     public void managerAddClub(ActionEvent event){
 
 
@@ -129,7 +154,8 @@ public class ManagerPageController implements Initializable {
                 alert.showAndWait();
 
                 // Reload the clubs table data
-                loadClubs();
+                managerShowData();
+                //loadClubs();
 
                 //initialize the data boxes
                 manager_add_clubName.setText("");
@@ -197,6 +223,17 @@ public class ManagerPageController implements Initializable {
         }
     }
 
+    //first try to show off the table in managaer page
+   /*private void loadClubs() {
+        // Fetch the data from ClubDb and set it to the TableView
+        //bservableList<Club> clubs = clubDb.loadClubsFromDatabase();
+        //manager_club_table.setItems(clubs);
+        manager_club_table.setItems(clubDb.loadClubsFromDatabase());
+    }*/
+
+
+
+    //initialize hthe manager home page !
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -204,15 +241,9 @@ public class ManagerPageController implements Initializable {
 
         setManager_club_category();
         setManager_club_state();
+        managerShowData();
 
         //clubDb.loadClubsFromDatabase(clubList);
-        loadClubs();
+        //loadClubs();
     }
-    private void loadClubs() {
-        // Fetch the data from ClubDb and set it to the TableView
-        //bservableList<Club> clubs = clubDb.loadClubsFromDatabase();
-        //manager_club_table.setItems(clubs);
-        manager_club_table.setItems(clubDb.loadClubsFromDatabase());
-    }
-
 }
