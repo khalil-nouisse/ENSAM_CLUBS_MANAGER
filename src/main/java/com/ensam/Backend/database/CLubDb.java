@@ -10,6 +10,7 @@ import com.ensam.Backend.manager.ClubManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 
 
@@ -23,8 +24,6 @@ public class CLubDb {
         String password = "";
         Club club = new Club(clubname,clubcategory,clubState, clubdescription);        //constructor of the new club
         ClubManager cm = new ClubManager() ;
-
-
 
         cm.addClub(club);
 
@@ -51,97 +50,10 @@ public class CLubDb {
             System.out.println("Error inserting clubs to database! : " + e.getMessage());
         }
     }
-    /*public static ArrayList<Club> loadClubsFromDatabase() {
-        ArrayList<Club> clubs = new ArrayList<>();
-        String query = "SELECT * FROM clubs";
-        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
-        String username = "root";
-        String password = "";
-        try (Connection connection = DriverManager.getConnection(url, username, password);
-             PreparedStatement preparedStatement = connection.prepareStatement(query);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
-
-            while (resultSet.next()) {
-                Club club = new Club();
-                club.setClubName(resultSet.getString("clubname"));
-                club.setClubCategory(resultSet.getString("clubcategory"));
-                // Set other properties if needed
-                clubs.add(club);
-            }
-
-        } catch (Exception e) {
-            System.err.println("Error loading clubs from database: " + e.getMessage());
-            e.printStackTrace();
-        }
-
-        return clubs;
-        }*/
-
-    /*public ObservableList<Club> loadClubsFromDatabase() {
-        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
-        String username = "root";
-        String password = ""; //
-
-
-        ObservableList<Club> clubList = FXCollections.observableArrayList();
-
-        String query = "SELECT * FROM clubs";
-
-        try (Connection conn = DriverManager.getConnection(url, username, password);
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(query)) {
-
-            while (rs.next()) {
-                int id = rs.getInt("clubID");
-                String name = rs.getString("clubName");
-                String category = rs.getString("clubCategory");
-                String state = rs.getString("clubState");
-                String description = rs.getString("clubDescription");
-
-                // Add the club to the list
-                clubList.add(new Club(id, name, category, state, description));
-            }
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return clubList;
-    }
-
-     */
     private PreparedStatement prepare;
     private Statement statement ;
     private ResultSet result;
 
-    /*public ObservableList<Club> loadClubsFromDatabase(){
-
-        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
-        String username = "root";
-        String password = "";
-
-        String sql = "SELECT * FROM clubs";
-        ObservableList<Club> listData = FXCollections.observableArrayList();
-
-        try (Connection connect = DriverManager.getConnection(url, username, password)){
-
-                prepare = connect.prepareStatement(sql);
-                result = prepare.executeQuery();
-
-                Club club;
-                while (result.next()) {
-                    club = new Club(result.getLong("clubID")
-                            , result.getString("clubName")
-                            , result.getString("clubCategory")
-                            , result.getString("clubState")
-                            , result.getString("clubDescription"));
-                    listData.add(club);
-                }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return listData;
-    }*/
 
     public ObservableList<Club> selectClubsFromDb(){
 
@@ -172,6 +84,32 @@ public class CLubDb {
         }
             return listData;
 
+    }
+
+    public Boolean deleteClubFromDb(String nameClub){
+        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
+        String username = "root";
+        String password = "";
+
+        String querry = "SELECT clubName FROM clubs WHERE clubName = '"+ nameClub + "'" ;
+        String deleteQuerry = "DELETE FROM clubs WHERE clubName = '"+ nameClub + "'" ;
+
+
+        try(Connection connect = DriverManager.getConnection(url,username,password)){
+            prepare = connect.prepareStatement(querry);
+            result = prepare.executeQuery();
+            if (result.next()){
+                prepare = connect.prepareStatement(deleteQuerry);
+                prepare.executeUpdate();
+                return true ;
+            }
+
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return false ;
     }
 
 

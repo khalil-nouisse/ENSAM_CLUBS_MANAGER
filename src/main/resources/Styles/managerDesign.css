@@ -77,8 +77,11 @@
 }
 
 .table-view .column-header-background{
-    -fx-background-color : linear-gradient(to bottom right , #739cba, #c8c8c8);
+    /*-fx-background-color : linear-gradient(to bottom right , #739cba, #c8c8c8);*/
+    -fx-background-color: white;
+    -fx-border-radius: 15px;
     -fx-background-radius: 15px;
+    -fx-border-color: linear-gradient(to bottom right , #608AA8 , #3A5366);
     -fx-background-insets: 0 0 0 0;
 }
 

@@ -26,6 +26,11 @@
                      <children>
                         <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
                            <children>
+                              <ImageView fitHeight="643.0" fitWidth="255.0" layoutX="-2.0" layoutY="5.0" opacity="0.06">
+                                 <image>
+                                    <Image url="@../../Images/1ba77a4b398069aa6b367f58fb76f54a.jpg" />
+                                 </image>
+                              </ImageView>
                               <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Images/logo_ade1.png" />
@@ -76,6 +81,16 @@
                      <children>
                         <AnchorPane fx:id="manager_form" layoutX="7.0" layoutY="195.0" prefHeight="650.0" prefWidth="737.0" style="-fx-background-color: #DEEAF3FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
+                              <ImageView fitHeight="649.0" fitWidth="622.0" layoutX="128.0" opacity="0.12">
+                                 <image>
+                                    <Image url="@../../Images/1ba77a4b398069aa6b367f58fb76f54a.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="650.0" fitWidth="517.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../../Images/6d0657b5acd39ff2329adb6dd05b244d.jpg" />
+                                 </image>
+                              </ImageView>
                               <AnchorPane layoutX="24.0" layoutY="70.0" prefHeight="318.0" prefWidth="706.0" stylesheets="@../../Styles/managerDesign.css">
                                  <styleClass>
                                     <String fx:value="white-bg" />
@@ -102,7 +117,7 @@
                                     <String fx:value="add-bg" />
                                  </styleClass>
                                  <children>
-                                    <Label layoutX="297.0" layoutY="4.0" prefHeight="30.0" prefWidth="97.0" text="ADD CLUB" textAlignment="CENTER" textFill="#fdfdfd">
+                                    <Label layoutX="264.0" layoutY="5.0" prefHeight="30.0" prefWidth="157.0" text="CLUBS MANAGEMENT" textAlignment="CENTER" textFill="#fdfdfd">
                                        <font>
                                           <Font name="Roboto Black" size="15.0" />
                                        </font>
@@ -119,7 +134,7 @@
                                           <Font name="Dubai Medium" size="15.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="manager_add_clubCategory" layoutX="133.0" layoutY="89.0" prefHeight="25.0" prefWidth="231.0" />
+                                    <ComboBox fx:id="manager_add_clubCategory" layoutX="133.0" layoutY="89.0" prefHeight="25.0" prefWidth="231.0" styleClass="white-bg" stylesheets="@../../Styles/managerDesign.css" />
                                     <Label layoutX="46.0" layoutY="166.0" text="Description  :" textFill="WHITE">
                                        <font>
                                           <Font name="Dubai Medium" size="15.0" />
@@ -136,7 +151,7 @@
                                        </children>
                                     </AnchorPane>
                                     <Button fx:id="manager_importBtn" layoutX="413.0" layoutY="166.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="import" />
-                                    <Button fx:id="manager_addBtn" layoutX="548.0" layoutY="47.0" mnemonicParsing="false" onAction="#managerAddClub" prefHeight="60.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="ADD">
+                                    <Button fx:id="manager_addBtn" layoutX="607.0" layoutY="44.0" mnemonicParsing="false" onAction="#managerAddClub" prefHeight="135.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="ADD">
                                        <font>
                                           <Font name="Eras Bold ITC" size="45.0" />
                                        </font></Button>
@@ -145,19 +160,20 @@
                                           <Font name="Dubai Medium" size="15.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="manager_add_clubState" layoutX="133.0" layoutY="129.0" prefHeight="25.0" prefWidth="231.0" />
-                                    <Button fx:id="manager_delBtn" layoutX="547.0" layoutY="116.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="DELETE">
+                                    <ComboBox fx:id="manager_add_clubState" layoutX="133.0" layoutY="129.0" prefHeight="25.0" prefWidth="231.0" styleClass="white-bg" stylesheets="@../../Styles/managerDesign.css" />
+                                    <Button fx:id="manager_delBtn" layoutX="532.0" layoutY="116.0" mnemonicParsing="false" onAction="#managerDeleteClub" prefHeight="60.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="DEL">
+                                       <font>
+                                          <Font name="Eras Bold ITC" size="45.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="manager_clearBtn" layoutX="532.0" layoutY="45.0" mnemonicParsing="false" onAction="#managerClearDataBtn" prefHeight="60.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="CLEAR">
                                        <font>
                                           <Font name="Eras Bold ITC" size="45.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </AnchorPane>
-                              <TextField layoutX="38.0" layoutY="26.0" prefHeight="29.0" prefWidth="223.0" promptText="search" styleClass="search-btn" stylesheets="@../../Styles/managerDesign.css" />
-                              <Button layoutX="291.0" layoutY="26.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="74.0" styleClass="del-btn" stylesheets="@../../Styles/managerDesign.css" text="DELETE">
-                                 <font>
-                                    <Font size="13.0" />
-                                 </font></Button>
+                              <TextField layoutX="38.0" layoutY="26.0" prefHeight="29.0" prefWidth="333.0" promptText="search" styleClass="search-btn" stylesheets="@../../Styles/managerDesign.css" />
                            </children>
                         </AnchorPane>
                      </children></AnchorPane>

@@ -105,16 +105,16 @@ public class ManagerPageController implements Initializable {
         manager_add_clubState.setItems(state);
     }
 
-    // ***************************************************************************88
 
 
-    //trying to show off the manager page table
+
+    //Show off the manager page table
     private ObservableList<Club> managerListData ;
     public void managerShowData(){
 
         managerListData = clubDb.selectClubsFromDb();
 
-        manager_club_id.setCellValueFactory(new PropertyValueFactory<>("clubId"));
+        manager_club_id.setCellValueFactory(new PropertyValueFactory<>("clubID"));
         manager_club_name.setCellValueFactory(new PropertyValueFactory<>("clubName"));
         manager_club_category.setCellValueFactory(new PropertyValueFactory<>("clubCategory"));
         manager_club_state.setCellValueFactory(new PropertyValueFactory<>("clubState"));
@@ -127,7 +127,6 @@ public class ManagerPageController implements Initializable {
 
     //add club button
     public void managerAddClub(ActionEvent event){
-
 
         if(manager_add_clubName.getText().isEmpty()
                 || manager_add_clubCategory.getSelectionModel().isEmpty()
@@ -155,7 +154,6 @@ public class ManagerPageController implements Initializable {
 
                 // Reload the clubs table data
                 managerShowData();
-                //loadClubs();
 
                 //initialize the data boxes
                 manager_add_clubName.setText("");
@@ -169,6 +167,41 @@ public class ManagerPageController implements Initializable {
                 e.printStackTrace();
             }
         }
+    }
+
+    //delete club button
+    public void managerDeleteClub(ActionEvent e){
+
+        //confirmation message !
+        alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Delete Club Confirmation");
+        alert.setContentText("Are you sure you want to delete the club?");
+
+        //control the choice
+        Optional<ButtonType> option = alert.showAndWait() ;
+        if(option.get().equals(ButtonType.OK)){
+            clubDb.deleteClubFromDb(manager_add_clubName.getText());
+            //intitialise the information area
+            manager_add_clubName.setText("");
+            manager_add_clubCategory.getSelectionModel().clearSelection();
+            manager_add_clubState.getSelectionModel().clearSelection();
+            manager_add_clubDescription.setText("");
+            // Reload the clubs table data
+            managerShowData();
+
+        }
+        else{
+
+        }
+
+    }
+
+    public void managerClearDataBtn(){
+        manager_add_clubName.setText("");
+        manager_add_clubCategory.getSelectionModel().clearSelection();
+        manager_add_clubState.getSelectionModel().clearSelection();
+        manager_add_clubDescription.setText("");
     }
 
     //Sign out button
@@ -187,8 +220,6 @@ public class ManagerPageController implements Initializable {
             Optional<ButtonType> option = alert.showAndWait() ;
 
             if(option.get().equals(ButtonType.OK)){
-
-
 
                 //after logout confirmation go back to login page!
 
@@ -223,22 +254,12 @@ public class ManagerPageController implements Initializable {
         }
     }
 
-    //first try to show off the table in managaer page
-   /*private void loadClubs() {
-        // Fetch the data from ClubDb and set it to the TableView
-        //bservableList<Club> clubs = clubDb.loadClubsFromDatabase();
-        //manager_club_table.setItems(clubs);
-        manager_club_table.setItems(clubDb.loadClubsFromDatabase());
-    }*/
-
-
 
     //initialize hthe manager home page !
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        //ObservableList<Club> clubList = FXCollections.observableArrayList();
-
+        manager_btn.setDisable(true);   //this one to make the manager button unclickable since it's already opened
         setManager_club_category();
         setManager_club_state();
         managerShowData();

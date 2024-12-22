@@ -82,7 +82,7 @@ public class LoginController {
         else{
             try{
                 if(memberDb.LoginVerification(si_username.getText() , si_password.getText())){         //succesfull login
-                     alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
                     alert.setContentText("Succesfully Login !");

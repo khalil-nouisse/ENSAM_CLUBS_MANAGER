@@ -29,6 +29,7 @@ module com.example.ensam_clubs2 {
     // Opens the package containing your controller classes to JavaFX
     opens com.ensam.Controllers to javafx.fxml;
     opens com.ensam.Backend.model to javafx.base;
+    opens com.ensam.Backend.database to javafx.base;
 
     exports com.ensam;
 }
