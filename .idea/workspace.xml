@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="update : manager page is set ! also the import button works, &#10;need to fix the code so only the admine  could access the managerPage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" afterDir="false" />
-    </list>
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="update : manager page is set ! also the import button works, &#10;only the admin could log to manager session" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +148,7 @@
       <workItem from="1734899067935" duration="7123000" />
       <workItem from="1734942972989" duration="221000" />
       <workItem from="1734948558313" duration="2018000" />
-      <workItem from="1734981190697" duration="4701000" />
+      <workItem from="1734981190697" duration="5586000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -225,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734985593734</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update : manager page is set ! also the import button works, &#10;only the admin could log to manager session">
+      <option name="closed" value="true" />
+      <created>1734985999464</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734985999464</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +265,8 @@
     <MESSAGE value="update : tableview for clubs show off succcesfully" />
     <MESSAGE value="update : all the manager page is set / except image import !" />
     <MESSAGE value="update : manager page is set ! also the import button works, &#10;need to fix the code so only the admine  could access the managerPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="update : manager page is set ! also the import button works, &#10;need to fix the code so only the admine  could access the managerPage" />
+    <MESSAGE value="update : manager page is set ! also the import button works, &#10;only the admin could log to manager session" />
+    <option name="LAST_COMMIT_MESSAGE" value="update : manager page is set ! also the import button works, &#10;only the admin could log to manager session" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
