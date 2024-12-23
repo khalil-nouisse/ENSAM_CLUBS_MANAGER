@@ -2,6 +2,7 @@ package com.ensam.Controllers.Admin;
 
 import com.ensam.Backend.database.CLubDb;
 import com.ensam.Backend.model.Club;
+import com.ensam.Backend.model.data;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,13 +12,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.awt.desktop.OpenFilesEvent;
+import java.io.File;
 import java.net.URL;
 import java.util.*;
+import java.util.List;
 
 
 public class ManagerPageController implements Initializable {
@@ -85,6 +94,7 @@ public class ManagerPageController implements Initializable {
 
     Alert alert;
     CLubDb clubDb = new CLubDb();
+    private  Image image;
 
     // category list in the manager page !
     private String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
@@ -131,7 +141,8 @@ public class ManagerPageController implements Initializable {
         if(manager_add_clubName.getText().isEmpty()
                 || manager_add_clubCategory.getSelectionModel().isEmpty()
                 || manager_add_clubState.getSelectionModel().isEmpty()
-                || manager_add_clubDescription.getText().isEmpty()){
+                || manager_add_clubDescription.getText().isEmpty()
+                || data.path == null){
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Message");
             alert.setHeaderText(null);
@@ -144,7 +155,8 @@ public class ManagerPageController implements Initializable {
                clubDb.saveClubToDatabase(manager_add_clubName.getText()
                         ,(String) manager_add_clubCategory.getSelectionModel().getSelectedItem()
                         ,(String)manager_add_clubState.getSelectionModel().getSelectedItem()
-                        ,manager_add_clubDescription.getText()  );
+                        ,manager_add_clubDescription.getText()
+                        ,data.path);
 
                 alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Information Message");
@@ -160,12 +172,26 @@ public class ManagerPageController implements Initializable {
                 manager_add_clubCategory.getSelectionModel().clearSelection();
                 manager_add_clubState.getSelectionModel().clearSelection();
                 manager_add_clubDescription.setText("");
+                manager_add_image.setImage(null);
 
             }
             catch (Exception e){
                 System.out.println("Error adding club to database!");
                 e.printStackTrace();
             }
+        }
+    }
+
+    //manager impot image button
+    public void managerImportBtn(ActionEvent e){
+        FileChooser openFile = new FileChooser();
+        openFile.getExtensionFilters().add(new FileChooser.ExtensionFilter("Open Image File ","*png","*jpg"));
+        File file  = openFile.showOpenDialog(main_form.getScene().getWindow());
+        if(file != null){
+            data.path = file.getAbsolutePath();
+            image = new Image(file.toURI().toString(), 120, 127, false, true);
+
+            manager_add_image.setImage(image);
         }
     }
 
@@ -180,7 +206,7 @@ public class ManagerPageController implements Initializable {
 
         //control the choice
         Optional<ButtonType> option = alert.showAndWait() ;
-        if(option.get().equals(ButtonType.OK)){
+        if(option.get().equals(ButtonType.OK)){         //confirm exit
             clubDb.deleteClubFromDb(manager_add_clubName.getText());
             //intitialise the information area
             manager_add_clubName.setText("");
@@ -191,9 +217,6 @@ public class ManagerPageController implements Initializable {
             managerShowData();
 
         }
-        else{
-
-        }
 
     }
 
@@ -202,6 +225,7 @@ public class ManagerPageController implements Initializable {
         manager_add_clubCategory.getSelectionModel().clearSelection();
         manager_add_clubState.getSelectionModel().clearSelection();
         manager_add_clubDescription.setText("");
+        manager_add_image.setImage(null);
     }
 
     //Sign out button

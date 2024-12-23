@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ensam.Backend.manager.ClubManager;
+import com.ensam.Backend.model.data;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -18,28 +19,35 @@ public class CLubDb {
 
 
 
-    public  static void saveClubToDatabase(String clubname, String clubcategory ,String clubState ,String clubdescription) {
+    //insert club to database table clubs
+    public  static void saveClubToDatabase(String clubname, String clubcategory ,String clubState ,String clubdescription, String clubimage) {
+
         String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
         String username = "root";
         String password = "";
-        Club club = new Club(clubname,clubcategory,clubState, clubdescription);        //constructor of the new club
+
+        Club club = new Club(clubname,clubcategory,clubState, clubdescription , clubimage);        //constructor of the new club
         ClubManager cm = new ClubManager() ;
 
         cm.addClub(club);
 
         long membersNum = club.getClubMembers();
 
-        String query = "insert into clubs(clubName,clubCategory,clubState,clubDescription,membersNumber) VALUES (?, ?, ?, ?, ?)";
+        String query = "insert into clubs(clubName,clubCategory,clubState,clubDescription,membersNumber,clubImage) VALUES (?, ?, ?, ?, ?, ?)";
 
         try (Connection connection = DriverManager.getConnection(url, username, password);
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-            //preparedStatement.setLong(1, ID   );
             preparedStatement.setString(1, clubname);
             preparedStatement.setString(2, clubcategory);
             preparedStatement.setString(3, clubState);
             preparedStatement.setString(4, clubdescription);
             preparedStatement.setLong(5, membersNum);
+            //preparedStatement.setString(6, clubimage);
+            String path = clubimage;
+            path = path.replace("\\", "\\\\");
+
+            preparedStatement.setString(6, path);
 
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
@@ -50,11 +58,12 @@ public class CLubDb {
             System.out.println("Error inserting clubs to database! : " + e.getMessage());
         }
     }
+
     private PreparedStatement prepare;
     private Statement statement ;
     private ResultSet result;
 
-
+    // load the clubs from the databsae to an Observable list , to be used to show off the data in manager table
     public ObservableList<Club> selectClubsFromDb(){
 
         String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
@@ -86,6 +95,7 @@ public class CLubDb {
 
     }
 
+    //delete existing club from database table clubs
     public Boolean deleteClubFromDb(String nameClub){
         String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
         String username = "root";

@@ -150,7 +150,7 @@
                                           <ImageView fx:id="manager_add_image" fitHeight="112.0" fitWidth="120.0" layoutX="-11.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" />
                                        </children>
                                     </AnchorPane>
-                                    <Button fx:id="manager_importBtn" layoutX="413.0" layoutY="166.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="import" />
+                                    <Button fx:id="manager_importBtn" layoutX="413.0" layoutY="166.0" mnemonicParsing="false" onAction="#managerImportBtn" prefHeight="19.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="import" />
                                     <Button fx:id="manager_addBtn" layoutX="607.0" layoutY="44.0" mnemonicParsing="false" onAction="#managerAddClub" prefHeight="135.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="ADD">
                                        <font>
                                           <Font name="Eras Bold ITC" size="45.0" />

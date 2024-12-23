@@ -16,6 +16,7 @@ public class Club {
     private ArrayList<String> ClubEvent ;
     private ArrayList<Member> members ;
     private ArrayList<ExecutiveOffice> office ;
+    private String clubImage;
 
     //constructor
     public Club(){
@@ -24,11 +25,12 @@ public class Club {
         clubDescription = "null";
 
     }
-    public Club(String clubName , String clubCategory , String clubState , String clubDescription){
+    public Club(String clubName , String clubCategory , String clubState , String clubDescription , String clubImage){
         this.clubName = clubName ;
         this.clubCategory = clubCategory ;
         this.clubState = clubState ;
-        this . clubDescription = clubDescription ;
+        this.clubDescription = clubDescription ;
+        this.clubImage = clubImage ;
     }
     public Club(long clubId ,String clubName , String clubCategory , String clubState , String clubDescription){
         this.clubId = clubId;
@@ -122,6 +124,15 @@ public class Club {
     public void setClubEvents(ArrayList<String> clubEvents) {
         this.ClubEvent = ClubEvent ;
     }
+
+    public String getClubImage() {
+        return clubImage;
+    }
+
+    public void setClubImage(String clubImage) {
+        this.clubImage = clubImage;
+    }
+
     //display !
     @Override
     public String toString(){
