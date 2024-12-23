@@ -62,16 +62,8 @@ public class MemberDb {
                     try (PreparedStatement checkUsernameStmt  = connection.prepareStatement(check_username)) {
                         result1 = checkUsernameStmt.executeQuery();
                         if (result1.next()) {
-                            /* try (PreparedStatement checkCredentialsStmt = connection.prepareStatement(check_password) ){
-                             result2 = checkCredentialsStmt.executeQuery();
-                             if (result2.next()){
-                                    return 3;       // Username and password combination exists
-                            }
-                        }*/
-
-                        return 1;       //username deja existe !
-                    }
-
+                            return 1;           //username deja existe !
+                        }
                     }
                 }
             } catch (Exception e) {

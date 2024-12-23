@@ -18,6 +18,26 @@ import javafx.scene.control.TableView;
 public class CLubDb {
 
 
+    public static boolean clubExist(String clubname){
+
+        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
+        String username = "root";
+        String password = "";
+
+        String checkClubName = "SELECT clubName FROM clubs WHERE clubName = '"+ clubname + "'";
+        try(Connection connect = DriverManager.getConnection(url , username ,password );
+            PreparedStatement prepare = connect.prepareStatement(checkClubName)){
+            ResultSet result = prepare.executeQuery();
+            if(result.next()){
+                //this club already exists !
+                return true ;
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false ;  //the club doesnt exist
+    }
 
     //insert club to database table clubs
     public  static void saveClubToDatabase(String clubname, String clubcategory ,String clubState ,String clubdescription, String clubimage) {

@@ -28,6 +28,8 @@ import java.net.URL;
 import java.util.*;
 import java.util.List;
 
+import static com.ensam.Backend.database.CLubDb.clubExist;
+
 
 public class ManagerPageController implements Initializable {
 
@@ -151,34 +153,45 @@ public class ManagerPageController implements Initializable {
         }
         else{
             try {
+                //check if club already exists in the database
+                if(clubExist(manager_add_clubName.getText())){
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error Message");
+                    alert.setHeaderText("Club exist already");
+                    alert.setContentText("this CLub already exist !");
+                    alert.showAndWait();
+                }
+                else {
 
-               clubDb.saveClubToDatabase(manager_add_clubName.getText()
-                        ,(String) manager_add_clubCategory.getSelectionModel().getSelectedItem()
-                        ,(String)manager_add_clubState.getSelectionModel().getSelectedItem()
-                        ,manager_add_clubDescription.getText()
-                        ,data.path);
+                    //add club
+                    clubDb.saveClubToDatabase(manager_add_clubName.getText()
+                            , (String) manager_add_clubCategory.getSelectionModel().getSelectedItem()
+                            , (String) manager_add_clubState.getSelectionModel().getSelectedItem()
+                            , manager_add_clubDescription.getText()
+                            , data.path);
 
-                alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Information Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Succesfully added club!");
-                alert.showAndWait();
+                    alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Information Message");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Succesfully added club!");
+                    alert.showAndWait();
 
-                // Reload the clubs table data
-                managerShowData();
+                    // Reload the clubs table data
+                    managerShowData();
 
-                //initialize the data boxes
-                manager_add_clubName.setText("");
-                manager_add_clubCategory.getSelectionModel().clearSelection();
-                manager_add_clubState.getSelectionModel().clearSelection();
-                manager_add_clubDescription.setText("");
-                manager_add_image.setImage(null);
-
+                    //initialize the data boxes
+                    manager_add_clubName.setText("");
+                    manager_add_clubCategory.getSelectionModel().clearSelection();
+                    manager_add_clubState.getSelectionModel().clearSelection();
+                    manager_add_clubDescription.setText("");
+                    manager_add_image.setImage(null);
+                }
             }
             catch (Exception e){
                 System.out.println("Error adding club to database!");
                 e.printStackTrace();
             }
+
         }
     }
 
