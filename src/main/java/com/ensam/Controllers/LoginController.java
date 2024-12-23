@@ -89,28 +89,32 @@ public class LoginController {
                     alert.showAndWait();
 
 
+                    if(si_username.getText().equals("admin") && si_password.getText().equals("admin")) {        //login as an ADMIN / MANAGER
 
-                    // Load the MainInterface.fxml
+                        // Load the MainInterface.fxml
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/managerPage.fxml"));
+                        Parent root = loader.load();       //error here
 
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/managerPage.fxml"));
-                    Parent root = loader.load();       //error here
+                        //Get the current stage from the event source
+                        Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
-                    //Get the current stage from the event source
-                    Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                        // Set the new scene
+                        Scene mainScene = new Scene(root);
+                        currentStage.setScene(mainScene);
 
-                    // Set the new scene
-                    Scene mainScene = new Scene(root);
-                    currentStage.setScene(mainScene);
+                        // Resize the stage to fit the new scene
+                        currentStage.sizeToScene();
+                        currentStage.setMinWidth(1018);
+                        currentStage.setMinHeight(690);
+                        currentStage.setMaxWidth(1018);
+                        currentStage.setMaxHeight(690);
 
-                    // Resize the stage to fit the new scene
-                    currentStage.sizeToScene();
-                    currentStage.setMinWidth(1018);
-                    currentStage.setMinHeight(690);
-                    currentStage.setMaxWidth(1018);
-                    currentStage.setMaxHeight(690);
+                        // Show the updated stage
+                        currentStage.show();
+                    }
+                    else{   //login as a normal USER/MEMBER
 
-                    // Show the updated stage
-                    currentStage.show();
+                    }
 
                 }
                 else{           //login failed
