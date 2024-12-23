@@ -173,7 +173,7 @@
                                     </Button>
                                  </children>
                               </AnchorPane>
-                              <TextField layoutX="38.0" layoutY="26.0" prefHeight="29.0" prefWidth="333.0" promptText="search" styleClass="search-btn" stylesheets="@../../Styles/managerDesign.css" />
+                              <TextField fx:id="manager_searchBar" layoutX="38.0" layoutY="26.0" onAction="#managerSearchBar" prefHeight="29.0" prefWidth="333.0" promptText="search" styleClass="search-btn" stylesheets="@../../Styles/managerDesign.css" />
                            </children>
                         </AnchorPane>
                      </children></AnchorPane>

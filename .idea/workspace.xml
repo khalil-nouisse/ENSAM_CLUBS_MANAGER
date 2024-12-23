@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="update : manager page is set ! also the import button works, &#10;only the admin could log to manager session">
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="update : manager page is set ! also the import button works for club image, &#10;only the admin could log to manager session&#10;, the search for club in database before inserting is done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/CLubDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/CLubDb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/MemberDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/MemberDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "image-ntegration",
+    "git-widget-placeholder": "searchbar",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/asus/Desktop/IT/programation/JAVA/Collections",
     "list.type.of.created.stylesheet": "CSS",
@@ -235,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734985999464</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update : manager page is set ! also the import button works for club image, &#10;only the admin could log to manager session&#10;, the search for club in database before inserting is done">
+      <option name="closed" value="true" />
+      <created>1734990423366</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734990423366</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +278,8 @@
     <MESSAGE value="update : all the manager page is set / except image import !" />
     <MESSAGE value="update : manager page is set ! also the import button works, &#10;need to fix the code so only the admine  could access the managerPage" />
     <MESSAGE value="update : manager page is set ! also the import button works, &#10;only the admin could log to manager session" />
-    <option name="LAST_COMMIT_MESSAGE" value="update : manager page is set ! also the import button works, &#10;only the admin could log to manager session" />
+    <MESSAGE value="update : manager page is set ! also the import button works for club image, &#10;only the admin could log to manager session&#10;, the search for club in database before inserting is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="update : manager page is set ! also the import button works for club image, &#10;only the admin could log to manager session&#10;, the search for club in database before inserting is done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

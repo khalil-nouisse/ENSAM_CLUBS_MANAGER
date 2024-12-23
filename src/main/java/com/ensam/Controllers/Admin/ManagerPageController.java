@@ -5,6 +5,7 @@ import com.ensam.Backend.model.Club;
 import com.ensam.Backend.model.data;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -93,6 +94,9 @@ public class ManagerPageController implements Initializable {
 
     @FXML
     private ImageView manager_add_image;
+
+    @FXML
+    private TextField manager_searchBar;
 
     Alert alert;
     CLubDb clubDb = new CLubDb();
@@ -211,24 +215,34 @@ public class ManagerPageController implements Initializable {
     //delete club button
     public void managerDeleteClub(ActionEvent e){
 
-        //confirmation message !
-        alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmation");
-        alert.setHeaderText("Delete Club Confirmation");
-        alert.setContentText("Are you sure you want to delete the club?");
 
-        //control the choice
-        Optional<ButtonType> option = alert.showAndWait() ;
-        if(option.get().equals(ButtonType.OK)){         //confirm exit
-            clubDb.deleteClubFromDb(manager_add_clubName.getText());
-            //intitialise the information area
-            manager_add_clubName.setText("");
-            manager_add_clubCategory.getSelectionModel().clearSelection();
-            manager_add_clubState.getSelectionModel().clearSelection();
-            manager_add_clubDescription.setText("");
-            // Reload the clubs table data
-            managerShowData();
+        if(manager_add_clubName.getText().isEmpty()){      //in case the name of the club to delete not available
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Enter the club name !");
+            alert.showAndWait();
+        }
+        else {                                            //delete og the club
+            //confirmation message !
+            alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText("Delete Club Confirmation");
+            alert.setContentText("Are you sure you want to delete the club?");
 
+            //control the choice
+            Optional<ButtonType> option = alert.showAndWait() ;
+            if (option.get().equals(ButtonType.OK)) {         //confirm exit
+                clubDb.deleteClubFromDb(manager_add_clubName.getText());
+                //intitialise the information area
+                manager_add_clubName.setText("");
+                manager_add_clubCategory.getSelectionModel().clearSelection();
+                manager_add_clubState.getSelectionModel().clearSelection();
+                manager_add_clubDescription.setText("");
+                // Reload the clubs table data
+                managerShowData();
+
+            }
         }
 
     }
@@ -239,6 +253,27 @@ public class ManagerPageController implements Initializable {
         manager_add_clubState.getSelectionModel().clearSelection();
         manager_add_clubDescription.setText("");
         manager_add_image.setImage(null);
+    }
+    public void managerSearchBar(ActionEvent e){
+        ObservableList<Club> clublist = FXCollections.observableArrayList();
+        CLubDb db = new CLubDb();
+        clublist = db.selectClubsFromDb();
+        // Create a FilteredList for dynamic filtering
+        FilteredList<Club> filteredClubs = new FilteredList<>(clublist, p -> true);
+
+        // Bind the FilteredList to the TableView
+        manager_club_table.setItems(filteredClubs);
+        // Add a listener to the search bar
+        manager_searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredClubs.setPredicate(club -> {
+                if (newValue == null || newValue.isEmpty()) {
+                    return true; // Show all clubs if the search bar is empty
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+                return club.getClubName().toLowerCase().contains(lowerCaseFilter);
+            });
+        });
     }
 
     //Sign out button
@@ -300,6 +335,8 @@ public class ManagerPageController implements Initializable {
         setManager_club_category();
         setManager_club_state();
         managerShowData();
+
+
 
         //clubDb.loadClubsFromDatabase(clubList);
         //loadClubs();
