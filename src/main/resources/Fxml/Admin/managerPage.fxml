@@ -26,7 +26,7 @@
                      <children>
                         <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ImageView fitHeight="643.0" fitWidth="255.0" layoutX="-2.0" layoutY="5.0" opacity="0.06">
+                              <ImageView fitHeight="643.0" fitWidth="255.0" layoutX="-2.0" layoutY="5.0" opacity="0.06" visible="false">
                                  <image>
                                     <Image url="@../../Images/1ba77a4b398069aa6b367f58fb76f54a.jpg" />
                                  </image>
@@ -39,7 +39,7 @@
                                     <Glow level="0.5" />
                                  </effect>
                               </ImageView>
-                              <Button fx:id="home_btn" layoutX="42.0" layoutY="350.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="Home">
+                              <Button fx:id="home_btn" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="Home">
                                  <font>
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
@@ -54,19 +54,19 @@
                                     <Font name="Dubai Light" size="21.0" />
                                  </font>
                               </Label>
-                              <Line endX="56.66667175292969" fill="WHITE" layoutX="151.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-                              <Button fx:id="manager_btn" layoutX="42.0" layoutY="415.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="Manager">
+                              <Line endX="56.66667175292969" fill="WHITE" layoutX="150.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Button fx:id="manager_btn" layoutX="32.0" layoutY="415.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="Manager">
                                  <font>
                                     <Font name="Eras Medium ITC" size="19.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="about_btn" layoutX="41.0" layoutY="483.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="About">
+                              <Button fx:id="about_btn" layoutX="31.0" layoutY="483.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="About">
                                  <font>
                                     <Font name="Eras Medium ITC" size="19.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="signout_btn" layoutX="68.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="126.0" styleClass="logout" stylesheets="@../../Styles/managerDesign.css" text="     Sign out" />
-                              <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="83.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+                              <Button fx:id="signout_btn" layoutX="58.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="126.0" styleClass="logout" stylesheets="@../../Styles/managerDesign.css" text="     Sign out" />
+                              <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="69.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Images/logout2.png" />
                                  </image>
@@ -81,7 +81,7 @@
                      <children>
                         <AnchorPane fx:id="manager_form" layoutX="7.0" layoutY="195.0" prefHeight="650.0" prefWidth="737.0" style="-fx-background-color: #DEEAF3FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ImageView fitHeight="649.0" fitWidth="622.0" layoutX="128.0" opacity="0.12">
+                              <ImageView fitHeight="649.0" fitWidth="750.0" opacity="0.03">
                                  <image>
                                     <Image url="@../../Images/1ba77a4b398069aa6b367f58fb76f54a.jpg" />
                                  </image>
