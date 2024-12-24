@@ -91,7 +91,8 @@ public class CLubDb {
                         , result.getString("clubName")
                         , result.getString("clubCategory")
                         , result.getString("clubState")
-                        , result.getString("clubDescription"));
+                        , result.getString("clubDescription")
+                        , result.getString("clubImage"));
                 listData.add(club);
             }
         }

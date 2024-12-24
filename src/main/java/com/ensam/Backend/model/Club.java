@@ -32,12 +32,13 @@ public class Club {
         this.clubDescription = clubDescription ;
         this.clubImage = clubImage ;
     }
-    public Club(long clubId ,String clubName , String clubCategory , String clubState , String clubDescription){
+    public Club(long clubId ,String clubName , String clubCategory , String clubState , String clubDescription ,String clubImage){
         this.clubId = clubId;
         this.clubName = clubName ;
         this.clubCategory = clubCategory ;
         this.clubState = clubState ;
-        this . clubDescription = clubDescription ;
+        this.clubDescription = clubDescription ;
+        this.clubImage = clubImage ;
     }
     public Club(long clubID ,String clubName, String clubCategory, int clubMembers, String clubState) {
         this.clubId = clubID ;
