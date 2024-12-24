@@ -44,7 +44,7 @@
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
                               </Button>
-                              <Label layoutX="24.0" layoutY="234.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
+                              <Label layoutX="24.0" layoutY="237.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
                                  <font>
                                     <Font name="Roboto Bold" size="25.0" />
                                  </font>
@@ -60,7 +60,7 @@
                                     <Font name="Eras Medium ITC" size="19.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="about_btn" layoutX="31.0" layoutY="483.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="About">
+                              <Button fx:id="about_btn" layoutX="31.0" layoutY="483.0" mnemonicParsing="false" onAction="#goToAbout" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="About">
                                  <font>
                                     <Font name="Eras Medium ITC" size="19.0" />
                                  </font>

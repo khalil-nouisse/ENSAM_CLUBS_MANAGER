@@ -3,6 +3,7 @@ package com.ensam.Controllers.Admin;
 import com.ensam.Backend.database.CLubDb;
 import com.ensam.Backend.model.Club;
 import com.ensam.Backend.model.data;
+import com.ensam.Controllers.AppUtils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -78,7 +79,7 @@ public class ManagerPageController implements Initializable {
     private Button signout_btn;
 
     @FXML
-    private ComboBox<?> manager_add_clubCategory;
+    private ComboBox<String> manager_add_clubCategory;
 
     @FXML
     private TextField manager_add_clubDescription;
@@ -100,8 +101,9 @@ public class ManagerPageController implements Initializable {
     private  Image image;
 
     // category list in the manager page !
-    private String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
+    String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
     public void setManager_club_category(){
+
         List<String> categoryL = new ArrayList<>() ;
         Collections.addAll(categoryL ,categoryList);
         ObservableList category = FXCollections.observableArrayList(categoryL);
@@ -261,44 +263,42 @@ public class ManagerPageController implements Initializable {
     }
     //Sign out button
     public void logout(ActionEvent event){
+        AppUtils.logout(event);
+    }
 
-        try{
-            //logout confirmation
-            alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("CONFIRMATION");
-            alert.setHeaderText("Sign Out Confirmation");
-            alert.setContentText("Are you sure you want to sign out?");
+    public void aboutBtn(ActionEvent e){
+        try {
+            // Load the MainInterface.fxml
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/About.fxml"));
+            Parent mainInterfaceRoot = loader.load();
 
-            //controle the choice of the user !
-            Optional<ButtonType> option = alert.showAndWait() ;
-            if(option.get().equals(ButtonType.OK)){         //after logout confirmation go back to login page!
+            // Get the current stage from the event source
+            Stage currentStage = (Stage) ((javafx.scene.Node) e.getSource()).getScene().getWindow();
 
-                // Load the MainInterface.fxml
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
-                Parent mainInterfaceRoot = loader.load();
+            // Set the new scene
+            Scene mainScene = new Scene(mainInterfaceRoot);
+            currentStage.setTitle("CLUBS MANAGER");
+            currentStage.setScene(mainScene);
+            currentStage.sizeToScene();
 
-                // Get the current stage from the event source
-                Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-
-                // Set the new scene
-                Scene mainScene = new Scene(mainInterfaceRoot);
-                currentStage.setTitle("CLUBS MANAGER");
-                currentStage.setScene(mainScene);
-
-                // Resize the stage to fit the new scene
-                currentStage.sizeToScene();
-                currentStage.setMinWidth(600);
-                currentStage.setMinHeight(400);
-                currentStage.setMaxWidth(600);
-                currentStage.setMaxHeight(400);
-
-                // Show the updated stage
-                currentStage.show();
-            }
-            //User clicked No.wants to stay logged in
-        }catch (Exception e){
-            e.printStackTrace();
+            // Show the updated stage
+            currentStage.show();
         }
+        catch (Exception exception){
+            exception.printStackTrace();
+        }
+    }
+
+    /*
+    @FXML
+    private void goToHome(ActionEvent event) {
+        AppUtils.navigateTo(event, "/Fxml/Home.fxml", "Home Page");
+    }
+     */
+
+    @FXML
+    private void goToAbout(ActionEvent event) {
+        AppUtils.navigateTo(event, "/Fxml/About.fxml", "About Page");
     }
 
     //initialize hthe manager home page !
