@@ -1,23 +1,14 @@
 package com.ensam.Backend.database;
 import java.net.URL;
 import java.sql.*;
-
 import com.ensam.Backend.model.Club;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.ensam.Backend.manager.ClubManager;
 import com.ensam.Backend.model.data;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableView;
 
 
 public class CLubDb {
-
-
     public static boolean clubExist(String clubname){
 
         String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
@@ -50,7 +41,6 @@ public class CLubDb {
         ClubManager cm = new ClubManager() ;
 
         cm.addClub(club);
-
         long membersNum = club.getClubMembers();
 
         String query = "insert into clubs(clubName,clubCategory,clubState,clubDescription,membersNumber,clubImage) VALUES (?, ?, ?, ?, ?, ?)";
@@ -66,7 +56,6 @@ public class CLubDb {
             //preparedStatement.setString(6, clubimage);
             String path = clubimage;
             path = path.replace("\\", "\\\\");
-
             preparedStatement.setString(6, path);
 
             int rowsInserted = preparedStatement.executeUpdate();
@@ -93,7 +82,6 @@ public class CLubDb {
         ObservableList<Club> listData = FXCollections.observableArrayList();
         String sql = "SELECT * FROM clubs";
 
-
         try (Connection connect = DriverManager.getConnection(url, username, password);){
             prepare = connect.prepareStatement(sql);
             result = prepare.executeQuery();
@@ -106,13 +94,11 @@ public class CLubDb {
                         , result.getString("clubDescription"));
                 listData.add(club);
             }
-
         }
         catch (Exception e) {
                 e.printStackTrace();
         }
             return listData;
-
     }
 
     //delete existing club from database table clubs
@@ -124,7 +110,6 @@ public class CLubDb {
         String querry = "SELECT clubName FROM clubs WHERE clubName = '"+ nameClub + "'" ;
         String deleteQuerry = "DELETE FROM clubs WHERE clubName = '"+ nameClub + "'" ;
 
-
         try(Connection connect = DriverManager.getConnection(url,username,password)){
             prepare = connect.prepareStatement(querry);
             result = prepare.executeQuery();
@@ -133,14 +118,10 @@ public class CLubDb {
                 prepare.executeUpdate();
                 return true ;
             }
-
-
         }
         catch (Exception e){
             e.printStackTrace();
         }
         return false ;
     }
-
-
 }

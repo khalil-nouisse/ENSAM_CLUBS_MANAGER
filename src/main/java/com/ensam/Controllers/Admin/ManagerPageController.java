@@ -21,16 +21,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.awt.*;
 import java.awt.desktop.OpenFilesEvent;
 import java.io.File;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
-
 import static com.ensam.Backend.database.CLubDb.clubExist;
-
 
 public class ManagerPageController implements Initializable {
 
@@ -111,7 +108,6 @@ public class ManagerPageController implements Initializable {
         manager_add_clubCategory.setItems(category);
 
     }
-
     //state list in the manager page
     private String []stateListe = {"Active" ,"Inactive "} ;
     public void setManager_club_state(){
@@ -120,10 +116,6 @@ public class ManagerPageController implements Initializable {
         ObservableList state = FXCollections.observableArrayList(stateL);
         manager_add_clubState.setItems(state);
     }
-
-
-
-
     //Show off the manager page table
     private ObservableList<Club> managerListData ;
     public void managerShowData(){
@@ -139,8 +131,6 @@ public class ManagerPageController implements Initializable {
 
         manager_club_table.setItems(managerListData);
     }
-
-
     //add club button
     public void managerAddClub(ActionEvent event){
 
@@ -195,10 +185,8 @@ public class ManagerPageController implements Initializable {
                 System.out.println("Error adding club to database!");
                 e.printStackTrace();
             }
-
         }
     }
-
     //manager impot image button
     public void managerImportBtn(ActionEvent e){
         FileChooser openFile = new FileChooser();
@@ -211,10 +199,8 @@ public class ManagerPageController implements Initializable {
             manager_add_image.setImage(image);
         }
     }
-
     //delete club button
     public void managerDeleteClub(ActionEvent e){
-
 
         if(manager_add_clubName.getText().isEmpty()){      //in case the name of the club to delete not available
             alert = new Alert(Alert.AlertType.ERROR);
@@ -241,10 +227,8 @@ public class ManagerPageController implements Initializable {
                 manager_add_clubDescription.setText("");
                 // Reload the clubs table data
                 managerShowData();
-
             }
         }
-
     }
 
     public void managerClearDataBtn(){
@@ -255,12 +239,12 @@ public class ManagerPageController implements Initializable {
         manager_add_image.setImage(null);
     }
     public void managerSearchBar(ActionEvent e){
+
         ObservableList<Club> clublist = FXCollections.observableArrayList();
         CLubDb db = new CLubDb();
         clublist = db.selectClubsFromDb();
         // Create a FilteredList for dynamic filtering
         FilteredList<Club> filteredClubs = new FilteredList<>(clublist, p -> true);
-
         // Bind the FilteredList to the TableView
         manager_club_table.setItems(filteredClubs);
         // Add a listener to the search bar
@@ -275,12 +259,10 @@ public class ManagerPageController implements Initializable {
             });
         });
     }
-
     //Sign out button
     public void logout(ActionEvent event){
 
         try{
-
             //logout confirmation
             alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("CONFIRMATION");
@@ -288,12 +270,8 @@ public class ManagerPageController implements Initializable {
             alert.setContentText("Are you sure you want to sign out?");
 
             //controle the choice of the user !
-
             Optional<ButtonType> option = alert.showAndWait() ;
-
-            if(option.get().equals(ButtonType.OK)){
-
-                //after logout confirmation go back to login page!
+            if(option.get().equals(ButtonType.OK)){         //after logout confirmation go back to login page!
 
                 // Load the MainInterface.fxml
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
@@ -317,15 +295,11 @@ public class ManagerPageController implements Initializable {
                 // Show the updated stage
                 currentStage.show();
             }
-
             //User clicked No.wants to stay logged in
-
-
         }catch (Exception e){
             e.printStackTrace();
         }
     }
-
 
     //initialize hthe manager home page !
     @Override
@@ -336,9 +310,5 @@ public class ManagerPageController implements Initializable {
         setManager_club_state();
         managerShowData();
 
-
-
-        //clubDb.loadClubsFromDatabase(clubList);
-        //loadClubs();
     }
 }

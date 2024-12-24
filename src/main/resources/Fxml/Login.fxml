@@ -32,6 +32,11 @@
                         <Font name="Eras Bold ITC" size="18.0" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="124.0" fitWidth="135.0" layoutX="170.0" layoutY="285.0">
+                     <image>
+                        <Image url="@../../../../../../../../95c.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="su_signupForm" prefHeight="410.0" prefWidth="300.0" styleClass="white-form" stylesheets="@../Styles/loginDesign.css">
