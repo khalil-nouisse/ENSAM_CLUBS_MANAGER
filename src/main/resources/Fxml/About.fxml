@@ -36,7 +36,7 @@
                                     <Glow level="0.5" />
                                  </effect>
                               </ImageView>
-                              <Button fx:id="home_btn" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Home" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0">
+                              <Button fx:id="home_btn" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Home" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0">
                                  <font>
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>

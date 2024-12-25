@@ -102,6 +102,31 @@ public class CLubDb {
             return listData;
     }
 
+    //this function returns the club informations just by clubImage
+    public static Club getClubFromDb(String clubimage){
+        Club club1;
+        String url = "jdbc:mysql://localhost:3306/ensamclubmanager";
+        String username = "root";
+        String password = "";
+        String sql = "SELECT * FROM clubs WHERE clubImage = '"+ clubimage + "'";
+
+        try (Connection connect = DriverManager.getConnection(url, username, password);) {
+            PreparedStatement prepare = connect.prepareStatement(sql);
+            ResultSet result = prepare.executeQuery();
+
+            club1 = new Club(result.getLong("clubID")
+                    , result.getString("clubName")
+                    , result.getString("clubCategory")
+                    , result.getString("clubState")
+                    , result.getString("clubDescription")
+                    , result.getString("clubImage"));
+            return club1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     //delete existing club from database table clubs
     public Boolean deleteClubFromDb(String nameClub){
         String url = "jdbc:mysql://localhost:3306/ensamclubmanager";

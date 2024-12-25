@@ -31,12 +31,10 @@ public class AboutController {
         AppUtils.logout(event);
     }
 
-    /*
     @FXML
     private void goToHome(ActionEvent event) {
         AppUtils.navigateTo(event, "/Fxml/Home.fxml", "Home Page");
     }
-    */
 
     @FXML
     private void goToManager(ActionEvent event) {

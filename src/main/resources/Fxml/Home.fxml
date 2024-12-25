@@ -8,70 +8,115 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensam.Controllers.HomeController">
-    <children>
-        <AnchorPane layoutX="-1.0" prefHeight="610.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../Styles/StyleHome.css">
-            <children>
-
-                <Button fx:id="home_btn" layoutX="42.0" layoutY="350.0" mnemonicParsing="false"  prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../Styles/StyleHome.css" text="Home">
-                    <font>
-                        <Font name="Eras Medium ITC" size="21.0" />
-                    </font>
-                </Button>
-                <Label layoutX="24.0" layoutY="234.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
-                    <font>
-                        <Font name="Roboto Bold" size="25.0" />
-                    </font>
-                </Label>
-                <Label layoutX="52.0" layoutY="215.0" text="ENSAM MEKNES" textFill="WHITE">
-                    <font>
-                        <Font name="Dubai Light" size="21.0" />
-                    </font>
-                </Label>
-                <Line endX="56.66667175292969" fill="WHITE" layoutX="151.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-
-                <Button fx:id="about_btn" layoutX="41.0" layoutY="483.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../Styles/StyleHome.css" text="About">
-                    <font>
-                        <Font name="Eras Medium ITC" size="19.0" />
-                    </font>
-                </Button>
-                <Button fx:id="signout_btn" layoutX="68.0" layoutY="572.0" mnemonicParsing="false"  prefHeight="27.0" prefWidth="126.0" styleClass="logout" stylesheets="@../Styles/StyleHome.css" text="     Sign out" />
-                <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="83.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
-
-                </ImageView>
-            </children>
-        </AnchorPane>
-        <AnchorPane layoutX="260.0" layoutY="-6.0" prefHeight="610.0" prefWidth="690.0" style="-fx-background-color: #DEEAF3FF;">
-            <children>
-                <AnchorPane layoutX="12.8" layoutY="92.0" prefHeight="502.0" prefWidth="665.0" stylesheets="@../Styles/loginDesign.css" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0">
-                    <styleClass>
-                        <String fx:value="radius" />
-                        <String fx:value="shadow" />
-                        <String fx:value="nav-form" />
-                        <String fx:value="add-bg" />
-                    </styleClass>
-                </AnchorPane>
-                <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="27.2" layoutY="110.4" prefHeight="469.0" prefWidth="637.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="110.0">
-                    <content>
-                        <GridPane fx:id="logoGrid" hgap="10" prefHeight="457.0" prefWidth="591.0" vgap="10">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            </rowConstraints>
-                        </GridPane>
-                    </content>
-                </ScrollPane>
-            </children>
-        </AnchorPane>
-    </children>
-</AnchorPane>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensam.Controllers.HomeController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="33.0" layoutY="33.0" prefHeight="650.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="650.0" prefWidth="251.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/logo_ade1.png" />
+                                 </image>
+                                 <effect>
+                                    <Glow level="0.5" />
+                                 </effect>
+                              </ImageView>
+                              <Button fx:id="home_btn" layoutX="31.0" layoutY="350.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Home" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="350.0">
+                                 <font>
+                                    <Font name="Eras Medium ITC" size="21.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="24.0" layoutY="234.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="52.0" layoutY="215.0" text="ENSAM MEKNES" textFill="WHITE">
+                                 <font>
+                                    <Font name="Dubai Light" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="56.66667175292969" fill="WHITE" layoutX="151.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+                              <Button fx:id="manager_btn" layoutX="42.0" layoutY="415.0" mnemonicParsing="false" onAction="#goToManager" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Manager" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0">
+                                 <font>
+                                    <Font name="Eras Medium ITC" size="19.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="about_btn" layoutX="41.0" layoutY="483.0" mnemonicParsing="false" onAction="#goToAbout" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="About" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0">
+                                 <font>
+                                    <Font name="Eras Medium ITC" size="19.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="signout_btn" layoutX="68.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="126.0" styleClass="logout" stylesheets="@../Styles/managerDesign.css" text="     Sign out" AnchorPane.rightAnchor="78.0" />
+                              <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="83.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="156.0">
+                                 <image>
+                                    <Image url="@../Images/logout2.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="manager_form" layoutX="7.0" layoutY="195.0" prefHeight="650.0" prefWidth="737.0" style="-fx-background-color: #DEEAF3FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="649.0" fitWidth="753.0" layoutX="-3.0" opacity="0.06">
+                                 <image>
+                                    <Image url="@../Images/1ba77a4b398069aa6b367f58fb76f54a.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="650.0" fitWidth="517.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Images/6d0657b5acd39ff2329adb6dd05b244d.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="24.0" layoutY="85.0" prefHeight="536.0" prefWidth="706.0" stylesheets="@../Styles/managerDesign.css">
+                                 <styleClass>
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="nav-form" />
+                                    <String fx:value="add-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="30.0" layoutY="37.0" prefHeight="476.0" prefWidth="637.0">
+                                       <content>
+                                          <GridPane fx:id="logoGrid" hgap="10" prefHeight="456.0" prefWidth="663.0" vgap="10">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

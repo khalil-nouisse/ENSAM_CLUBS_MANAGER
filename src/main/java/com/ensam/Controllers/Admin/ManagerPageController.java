@@ -4,6 +4,7 @@ import com.ensam.Backend.database.CLubDb;
 import com.ensam.Backend.model.Club;
 import com.ensam.Backend.model.data;
 import com.ensam.Controllers.AppUtils;
+import com.ensam.Controllers.HomeController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -99,7 +100,7 @@ public class ManagerPageController implements Initializable {
     Alert alert;
     CLubDb clubDb = new CLubDb();
     private  Image image;
-
+    HomeController homeController ;
     // category list in the manager page !
     String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
     public void setManager_club_category(){
@@ -133,6 +134,8 @@ public class ManagerPageController implements Initializable {
 
         manager_club_table.setItems(managerListData);
     }
+
+
     //add club button
     public void managerAddClub(ActionEvent event){
 
@@ -165,6 +168,9 @@ public class ManagerPageController implements Initializable {
                             , (String) manager_add_clubState.getSelectionModel().getSelectedItem()
                             , manager_add_clubDescription.getText()
                             , data.path);
+
+                    //homeController.put_logo(data.path);
+                    //homeController.put_logo(data.path);
 
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
@@ -266,12 +272,12 @@ public class ManagerPageController implements Initializable {
         AppUtils.logout(event);
     }
 
-    /*
+
     @FXML
     private void goToHome(ActionEvent event) {
         AppUtils.navigateTo(event, "/Fxml/Home.fxml", "Home Page");
     }
-     */
+
 
     @FXML
     private void goToAbout(ActionEvent event) {

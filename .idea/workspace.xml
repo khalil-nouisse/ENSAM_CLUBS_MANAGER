@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="manager and about is set">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/StyleHome.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/CLubDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/CLubDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/About.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/About.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="searchbar" />
+        <entry key="$PROJECT_DIR$" value="image-admin" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,28 +73,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "image-admin",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/asus/Desktop/Home",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;integration-homePage&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Desktop/Home&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ensam.App" />
@@ -164,7 +163,8 @@
       <workItem from="1735034089038" duration="8250000" />
       <workItem from="1735060594993" duration="1358000" />
       <workItem from="1735079685366" duration="413000" />
-      <workItem from="1735137138370" duration="3135000" />
+      <workItem from="1735137138370" duration="9128000" />
+      <workItem from="1735163003558" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -270,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735058180917</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="manager and about is set">
+      <option name="closed" value="true" />
+      <created>1735140915371</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1735140915371</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
