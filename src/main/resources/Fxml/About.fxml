@@ -36,7 +36,7 @@
                                     <Glow level="0.5" />
                                  </effect>
                               </ImageView>
-                              <Button fx:id="home_btn" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Home">
+                              <Button fx:id="home_btn" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Home" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0">
                                  <font>
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
@@ -52,18 +52,18 @@
                                  </font>
                               </Label>
                               <Line endX="56.66667175292969" fill="WHITE" layoutX="150.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-                              <Button fx:id="manager_btn" layoutX="32.0" layoutY="415.0" mnemonicParsing="false" onAction="#goToManager" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Manager">
+                              <Button fx:id="manager_btn" layoutX="32.0" layoutY="415.0" mnemonicParsing="false" onAction="#goToManager" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="Manager" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0">
                                  <font>
                                     <Font name="Eras Medium ITC" size="19.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="about_btn" layoutX="31.0" layoutY="483.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="About">
+                              <Button fx:id="about_btn" layoutX="31.0" layoutY="483.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn" stylesheets="@../Styles/managerDesign.css" text="About" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0">
                                  <font>
                                     <Font name="Eras Medium ITC" size="19.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="signout_btn" layoutX="58.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="126.0" styleClass="logout" stylesheets="@../Styles/managerDesign.css" text="     Sign out" />
-                              <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="69.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+                              <Button fx:id="signout_btn" layoutX="58.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="126.0" styleClass="logout" stylesheets="@../Styles/managerDesign.css" text="     Sign out" AnchorPane.rightAnchor="78.0" />
+                              <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="69.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="165.0">
                                  <image>
                                     <Image url="@../Images/logout2.png" />
                                  </image>

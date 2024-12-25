@@ -266,29 +266,6 @@ public class ManagerPageController implements Initializable {
         AppUtils.logout(event);
     }
 
-    public void aboutBtn(ActionEvent e){
-        try {
-            // Load the MainInterface.fxml
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/About.fxml"));
-            Parent mainInterfaceRoot = loader.load();
-
-            // Get the current stage from the event source
-            Stage currentStage = (Stage) ((javafx.scene.Node) e.getSource()).getScene().getWindow();
-
-            // Set the new scene
-            Scene mainScene = new Scene(mainInterfaceRoot);
-            currentStage.setTitle("CLUBS MANAGER");
-            currentStage.setScene(mainScene);
-            currentStage.sizeToScene();
-
-            // Show the updated stage
-            currentStage.show();
-        }
-        catch (Exception exception){
-            exception.printStackTrace();
-        }
-    }
-
     /*
     @FXML
     private void goToHome(ActionEvent event) {
