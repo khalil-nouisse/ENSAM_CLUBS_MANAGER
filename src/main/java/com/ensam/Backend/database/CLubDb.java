@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 
 
 public class CLubDb {
+
     public static boolean clubExist(String clubname){
 
         String url = "jdbc:mysql://localhost:3306/ensamclubmanager";

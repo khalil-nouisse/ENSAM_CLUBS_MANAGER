@@ -1,13 +1,19 @@
 package com.ensam.Controllers;
 
+import com.ensam.Backend.database.CLubDb;
+import com.ensam.Backend.model.Club;
 import com.ensam.Backend.model.data;
+import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 
 public class HomeController {
     @FXML
@@ -30,6 +36,11 @@ public class HomeController {
 
     @FXML
     private Button signout_btn;
+
+    CLubDb clubdb  = new CLubDb();
+    Club club ;
+
+
 
 
     public void logout(ActionEvent event){
@@ -68,7 +79,35 @@ public class HomeController {
         }catch (Exception e){
             System.out.println("Path in existe !!!!");
         }
+    }
 
+
+    /*public void initialize() {
+        clubdb.selectClubsFromDb().addListener((ListChangeListener<Club>) change -> {
+            while (change.next()) {
+                if (change.wasAdded() || change.wasRemoved()) {
+                    updateClubGrid();
+                }
+            }
+        });
+    }*/
+
+
+    private VBox createClubBox(Club club) {
+        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream(club.getClubImage())));
+        imageView.setFitWidth(100);
+        imageView.setFitHeight(100);
+        imageView.setPreserveRatio(true);
+
+        Label nameLabel = new Label(club.getClubName());
+        nameLabel.setStyle("-fx-font-weight: bold;");
+
+        VBox vBox = new VBox(imageView, nameLabel);
+        vBox.setSpacing(10);
+        vBox.setAlignment(Pos.CENTER);
+        //vBox.setOnMouseClicked(event -> showClubDetails(club));
+
+        return vBox;
     }
 
 }

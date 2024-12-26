@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="manager and about is set">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/SharedData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/CLubDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/CLubDb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/About.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/About.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    </list>
+    <list id="8f596835-e831-4c37-b0b5-78c9290c276c" name="Changes by DELL" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,6 +57,19 @@
     <setting file="file://$USER_HOME$/AppData/Local/Temp/ae85709b-9024-4816-b086-5690a49f122a_hash_tables_assignment.zip.22a/hash_tables_assignment/src/main/java/ma/ac/ensam/ilsi/HashTable.java" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/ecb15e1d-dca8-449c-bdc1-9c8aa2ea7e1f_hash_tables_assignment.zip.e1f/hash_tables_assignment/src/main/java/ma/ac/ensam/ilsi/RandomHashTable.java" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/f39ce9b1-9f05-4426-911e-396d72699850_hash_tables_assignment.zip.850/hash_tables_assignment/src/main/java/ma/ac/ensam/ilsi/OpenAddressingHashTable.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java">
+      <ranges>
+        <range start1="102" end1="103" start2="102" end2="109" changelist="8f596835-e831-4c37-b0b5-78c9290c276c" />
+        <range start1="141" end1="141" start2="147" end2="148" changelist="ca16d769-f10e-4f8f-83cf-2956064e2b47" />
+        <range start1="152" end1="153" start2="159" end2="160" changelist="ca16d769-f10e-4f8f-83cf-2956064e2b47" />
+        <range start1="170" end1="170" start2="177" end2="181" changelist="8f596835-e831-4c37-b0b5-78c9290c276c" />
+        <range start1="171" end1="172" start2="182" end2="186" changelist="8f596835-e831-4c37-b0b5-78c9290c276c" />
+        <range start1="278" end1="278" start2="292" end2="318" changelist="ca16d769-f10e-4f8f-83cf-2956064e2b47" />
+        <range start1="279" end1="279" start2="319" end2="331" changelist="ca16d769-f10e-4f8f-83cf-2956064e2b47" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -164,7 +178,7 @@
       <workItem from="1735060594993" duration="1358000" />
       <workItem from="1735079685366" duration="413000" />
       <workItem from="1735137138370" duration="9128000" />
-      <workItem from="1735163003558" duration="10000" />
+      <workItem from="1735163003558" duration="9364000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -278,15 +292,33 @@
       <option name="project" value="LOCAL" />
       <updated>1735140915371</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="manager and about is set">
+      <option name="closed" value="true" />
+      <created>1735163036919</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735163036919</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="2ee38276-5d18-4de1-afdb-653c638dd483" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="2ee38276-5d18-4de1-afdb-653c638dd483">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>

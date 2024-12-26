@@ -139,6 +139,7 @@ public class ManagerPageController implements Initializable {
     //add club button
     public void managerAddClub(ActionEvent event){
 
+        //if the user didn't fill the data
         if(manager_add_clubName.getText().isEmpty()
                 || manager_add_clubCategory.getSelectionModel().isEmpty()
                 || manager_add_clubState.getSelectionModel().isEmpty()
@@ -150,7 +151,7 @@ public class ManagerPageController implements Initializable {
             alert.setContentText("Please fill all club informations");
             alert.showAndWait();
         }
-        else{
+        else{       //if the user filled all the data
             try {
                 //check if club already exists in the database
                 if(clubExist(manager_add_clubName.getText())){
@@ -277,6 +278,44 @@ public class ManagerPageController implements Initializable {
     private void goToHome(ActionEvent event) {
         AppUtils.navigateTo(event, "/Fxml/Home.fxml", "Home Page");
     }
+    /*@FXML
+    private void goToHome(ActionEvent event) {
+        try {
+            // Charger le fichier FXML de la page Home
+            FXMLLoader homeLoader = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml"));
+            Parent homeRoot = homeLoader.load();
+            HomeController homeController = homeLoader.getController();
+
+            // Charger le fichier FXML de la page Manager
+            FXMLLoader managerLoader = new FXMLLoader(getClass().getResource("/Fxml/Admin/managerPage.fxml"));
+            Parent managerRoot = managerLoader.load();
+            ManagerPageController managerController = managerLoader.getController();
+
+            // Injecter le HomeController dans le ManagerPageController
+            managerController.setHomeController(homeController);
+
+            // Afficher la page Home
+            Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(homeRoot);
+            currentStage.setScene(scene);
+            currentStage.setTitle("Home Page");
+            currentStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+     */
+
+    public void setHomeController(HomeController homeController) {
+        if (homeController != null) {
+            this.homeController = homeController;
+            System.out.println("HomeController successfully injected into ManagerPageController.");
+        } else {
+            System.err.println("HomeController is null! Injection failed.");
+        }
+    }
+
 
 
     @FXML
