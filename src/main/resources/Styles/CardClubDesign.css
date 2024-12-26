@@ -16,6 +16,12 @@
 }
 
 .background{
-    -fx-background-color: #caecff
+    -fx-background-color: #1a7188;
+    -fx-cursor: hand;
+
+}
+.border {
+    -fx-border-color: #b5dbff;
+    -fx-border-width: 3;
 
 }

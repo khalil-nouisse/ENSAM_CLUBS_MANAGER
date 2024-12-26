@@ -77,7 +77,7 @@ public class HomeController implements Initializable {
                     row+=1;
                 }
                 menu_gridPane.add(pane , column++ ,row );
-                GridPane.setMargin(pane, new Insets(10));
+                GridPane.setMargin(pane, new Insets(5));
             }
             catch (Exception e){
                 e.printStackTrace();
