@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
@@ -60,6 +61,7 @@ public class HomeController implements Initializable {
         int row = 0;
         int column = 0 ;
 
+        menu_gridPane.getChildren().clear();
         menu_gridPane.getRowConstraints().clear();
         menu_gridPane.getColumnConstraints().clear();
         for(int q= 0 ; q <cardListData.size() ;q++){
@@ -75,6 +77,7 @@ public class HomeController implements Initializable {
                     row+=1;
                 }
                 menu_gridPane.add(pane , column++ ,row );
+                GridPane.setMargin(pane, new Insets(10));
             }
             catch (Exception e){
                 e.printStackTrace();
