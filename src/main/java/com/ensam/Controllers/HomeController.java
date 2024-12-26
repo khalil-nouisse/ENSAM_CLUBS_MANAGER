@@ -124,10 +124,10 @@ public class HomeController implements Initializable {
     private void goToAbout(ActionEvent event) {
         AppUtils.navigateTo(event, "/Fxml/About.fxml", "About Page");
     }
-    @FXML
+    /*@FXML
     private void goToAboutUser(ActionEvent event) {
         AppUtils.navigateTo(event, "/Fxml/User/UserAbout.fxml", "About Page");
-    }
+    }*/
 
 
     private int col = 0;
