@@ -16,3 +16,20 @@
     -fx-background-color: #c5d7e4;
     -fx-text-fill: black;
 }
+
+.join-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-border-radius: 20px;
+}
+.join-btn:hover{
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-width: 2px;
+
+}

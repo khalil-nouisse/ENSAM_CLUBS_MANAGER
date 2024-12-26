@@ -5,9 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 public class AboutController {
     @FXML
     private Button about_btn;
@@ -33,7 +30,7 @@ public class AboutController {
 
     @FXML
     private void goToHome(ActionEvent event) {
-        AppUtils.navigateTo(event, "/Fxml/Home.fxml", "Home Page");
+        AppUtils.navigateTo(event, "/Fxml/Admin/AdminHome.fxml", "Home Page");
     }
 
     @FXML

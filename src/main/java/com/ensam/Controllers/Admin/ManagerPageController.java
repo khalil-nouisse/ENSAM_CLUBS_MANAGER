@@ -10,10 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -22,9 +19,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-import java.awt.*;
-import java.awt.desktop.OpenFilesEvent;
+
 import java.io.File;
 import java.net.URL;
 import java.util.*;
@@ -274,38 +269,6 @@ public class ManagerPageController implements Initializable {
     }
 
 
-    @FXML
-    private void goToHome(ActionEvent event) {
-        AppUtils.navigateTo(event, "/Fxml/Home.fxml", "Home Page");
-    }
-    /*@FXML
-    private void goToHome(ActionEvent event) {
-        try {
-            // Charger le fichier FXML de la page Home
-            FXMLLoader homeLoader = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml"));
-            Parent homeRoot = homeLoader.load();
-            HomeController homeController = homeLoader.getController();
-
-            // Charger le fichier FXML de la page Manager
-            FXMLLoader managerLoader = new FXMLLoader(getClass().getResource("/Fxml/Admin/managerPage.fxml"));
-            Parent managerRoot = managerLoader.load();
-            ManagerPageController managerController = managerLoader.getController();
-
-            // Injecter le HomeController dans le ManagerPageController
-            managerController.setHomeController(homeController);
-
-            // Afficher la page Home
-            Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(homeRoot);
-            currentStage.setScene(scene);
-            currentStage.setTitle("Home Page");
-            currentStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-     */
 
     public void setHomeController(HomeController homeController) {
         if (homeController != null) {
@@ -316,6 +279,10 @@ public class ManagerPageController implements Initializable {
         }
     }
 
+    @FXML
+    private void goToHome(ActionEvent event) {
+        AppUtils.navigateTo(event, "/Fxml/Admin/AdminHome.fxml", "Home Page");
+    }
 
 
     @FXML

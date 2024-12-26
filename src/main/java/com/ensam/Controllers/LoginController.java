@@ -12,7 +12,9 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import com.ensam.Controllers.AppUtils;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -68,7 +70,6 @@ public class LoginController {
     // ----------------- connection interface backend/database ------------------
     MemberDb memberDb = new MemberDb();
     Alert alert ;
-
     //Login BLOCK
     @FXML
     public void loginBtn(ActionEvent event){
@@ -93,7 +94,7 @@ public class LoginController {
 
                         // Load the MainInterface.fxml
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/managerPage.fxml"));
-                        Parent root = loader.load();       //error here
+                        Parent root = loader.load();
 
                         //Get the current stage from the event source
                         Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
@@ -112,8 +113,27 @@ public class LoginController {
                         // Show the updated stage
                         currentStage.show();
                     }
-                    else{   //login as a normal USER/MEMBER
+                    else {   //login as a normal USER/MEMBER
+                        // Load the MainInterface.fxml
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/HomeUser.fxml"));
+                        Parent root = loader.load();
 
+                        //Get the current stage from the event source
+                        Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+                        // Set the new scene
+                        Scene mainScene = new Scene(root);
+                        currentStage.setScene(mainScene);
+
+                        // Resize the stage to fit the new scene
+                        currentStage.sizeToScene();
+                        currentStage.setMinWidth(1018);
+                        currentStage.setMinHeight(690);
+                        currentStage.setMaxWidth(1018);
+                        currentStage.setMaxHeight(690);
+
+                        // Show the updated stage
+                        currentStage.show();
                     }
 
                 }

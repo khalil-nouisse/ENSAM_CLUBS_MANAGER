@@ -25,7 +25,9 @@ module com.example.ensam_clubs2 {
 
     exports com.ensam.Controllers.Admin to javafx.fxml; // Allow FXML to access this package
     exports com.ensam.Controllers.User to javafx.fxml;  // Add if needed for other controllers
+    exports com.ensam.Controllers to javafx.fxml;
     opens com.ensam.Controllers.Admin to javafx.fxml;   // Allow reflective access for FXML
+
     // Opens the package containing your controller classes to JavaFX
     opens com.ensam.Controllers to javafx.fxml;
     opens com.ensam.Backend.model to javafx.base;
