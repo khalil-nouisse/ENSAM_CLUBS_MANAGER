@@ -38,6 +38,11 @@ public class AboutController {
         AppUtils.navigateTo(event, "/Fxml/Admin/managerPage.fxml", "Manager Page");
     }
 
+    /*@FXML
+    private void goToHomeUser(ActionEvent event) {
+        AppUtils.navigateTo(event, "/Fxml/User/UserHome.fxml", "Home Page");
+    }*/
+
     public void initialize() {
 
         about_btn.setDisable(true);

@@ -9,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 public class AboutUserController {
 
     @FXML
-    private Button about_btn;
+    private Button about_btnUser;
 
     @FXML
     private Button home_btn;
@@ -29,12 +29,12 @@ public class AboutUserController {
 
     @FXML
     private void goToHomeUser(ActionEvent event) {
-        AppUtils.navigateTo(event, "/Fxml/Admin/AdminHome.fxml", "Home Page");
+        AppUtils.navigateTo(event, "/Fxml/User/UserHomeController.fxml", "Home Page");
     }
 
     public void initialize() {
 
-        about_btn.setDisable(true);
+        about_btnUser.setDisable(true);
 
     }
 }
