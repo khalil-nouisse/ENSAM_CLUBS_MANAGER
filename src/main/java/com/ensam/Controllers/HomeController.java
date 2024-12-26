@@ -2,28 +2,27 @@ package com.ensam.Controllers;
 
 import com.ensam.Backend.database.CLubDb;
 import com.ensam.Backend.model.Club;
-import com.ensam.Backend.model.data;
-import javafx.collections.ListChangeListener;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 
-public class HomeController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HomeController implements Initializable {
     @FXML
     private Button about_btn;
 
     @FXML
     private Button home_btn;
-
-    @FXML
-    private GridPane logoGrid;
 
     @FXML
     private AnchorPane main_form;
@@ -35,12 +34,53 @@ public class HomeController {
     private AnchorPane manager_form;
 
     @FXML
+    private GridPane menu_gridPane;
+
+    @FXML
+    private ImageView menu_logo;
+
+    @FXML
+    private ScrollPane menu_scrollPane;
+
+    @FXML
     private Button signout_btn;
 
     CLubDb clubdb  = new CLubDb();
     Club club ;
+    private ObservableList<Club> cardListData = clubdb.selectClubsFromDb();
+    /*public ObservableList<Club> menuGetData(){
 
+        return cardListData ;
+    }*/
 
+    public void menuDisplayCard(){
+        cardListData.clear();
+        cardListData.addAll(clubdb.selectClubsFromDb());
+
+        int row = 0;
+        int column = 0 ;
+
+        menu_gridPane.getRowConstraints().clear();
+        menu_gridPane.getColumnConstraints().clear();
+        for(int q= 0 ; q <cardListData.size() ;q++){
+            try {
+                FXMLLoader load = new FXMLLoader();
+                load.setLocation(getClass().getResource("/Fxml/cardClub.fxml"));
+                AnchorPane pane = load.load();
+                CardClubController cardC = load.getController();
+                cardC.setData(cardListData.get(q));
+
+                if(column == 2){
+                    column = 0 ;
+                    row+=1;
+                }
+                menu_gridPane.add(pane , column++ ,row );
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
 
 
     public void logout(ActionEvent event){
@@ -61,53 +101,11 @@ public class HomeController {
     private int row = 0;
     private final int columns = 3;
 
-    public void put_logo(String image){
-
-        try {
-            ImageView imageView = new ImageView(new Image(image));
-            imageView.setFitWidth(200);
-            imageView.setFitHeight(200);
-            imageView.setPreserveRatio(true);
-            GridPane.setMargin(imageView, new javafx.geometry.Insets(5));
-            logoGrid.add(imageView, col, row);
-            col++;
-            if (col >= columns) {
-                col = 0;
-                row++;
-            }
-
-        }catch (Exception e){
-            System.out.println("Path in existe !!!!");
-        }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        menuDisplayCard();
     }
 
 
-    /*public void initialize() {
-        clubdb.selectClubsFromDb().addListener((ListChangeListener<Club>) change -> {
-            while (change.next()) {
-                if (change.wasAdded() || change.wasRemoved()) {
-                    updateClubGrid();
-                }
-            }
-        });
-    }*/
-
-
-    private VBox createClubBox(Club club) {
-        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream(club.getClubImage())));
-        imageView.setFitWidth(100);
-        imageView.setFitHeight(100);
-        imageView.setPreserveRatio(true);
-
-        Label nameLabel = new Label(club.getClubName());
-        nameLabel.setStyle("-fx-font-weight: bold;");
-
-        VBox vBox = new VBox(imageView, nameLabel);
-        vBox.setSpacing(10);
-        vBox.setAlignment(Pos.CENTER);
-        //vBox.setOnMouseClicked(event -> showClubDetails(club));
-
-        return vBox;
-    }
 
 }
