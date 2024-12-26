@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="the logo of the clubs show in the home page">
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/Club.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/CardClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/CardClubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/cardClub.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/cardClub.fxml" afterDir="false" />
     </list>
     <list id="8f596835-e831-4c37-b0b5-78c9290c276c" name="Changes by DELL" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +162,7 @@
       <workItem from="1735137138370" duration="9128000" />
       <workItem from="1735163003558" duration="9364000" />
       <workItem from="1735215121673" duration="1706000" />
-      <workItem from="1735227388210" duration="3377000" />
+      <workItem from="1735227388210" duration="3917000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -295,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735182889243</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic">
+      <option name="closed" value="true" />
+      <created>1735235923754</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1735235923754</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +349,9 @@
     <MESSAGE value="update : manager page is set ! also the import button works for club image, &#10;only the admin could log to manager session&#10;, the search for club in database before inserting is done" />
     <MESSAGE value="Changes by DELL" />
     <MESSAGE value="manager and about is set" />
-    <option name="LAST_COMMIT_MESSAGE" value="manager and about is set" />
+    <MESSAGE value="the logo of the clubs show in the home page" />
+    <MESSAGE value="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic" />
+    <option name="LAST_COMMIT_MESSAGE" value="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
