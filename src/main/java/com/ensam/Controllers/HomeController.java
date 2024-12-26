@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -26,6 +27,24 @@ public class HomeController implements Initializable {
     private Button home_btn;
 
     @FXML
+    private Label home_club_infoCategory;
+
+    @FXML
+    private Label home_club_infoDescription;
+
+    @FXML
+    private ImageView home_club_infoLogo;
+
+    @FXML
+    private Label home_club_infoMembers;
+
+    @FXML
+    private Label home_club_infoName;
+
+    @FXML
+    private Label home_club_infoState;
+
+    @FXML
     private AnchorPane main_form;
 
     @FXML
@@ -38,9 +57,6 @@ public class HomeController implements Initializable {
     private GridPane menu_gridPane;
 
     @FXML
-    private ImageView menu_logo;
-
-    @FXML
     private ScrollPane menu_scrollPane;
 
     @FXML
@@ -49,10 +65,7 @@ public class HomeController implements Initializable {
     CLubDb clubdb  = new CLubDb();
     Club club ;
     private ObservableList<Club> cardListData = clubdb.selectClubsFromDb();
-    /*public ObservableList<Club> menuGetData(){
 
-        return cardListData ;
-    }*/
 
     public void menuDisplayCard(){
         cardListData.clear();
@@ -69,8 +82,10 @@ public class HomeController implements Initializable {
                 FXMLLoader load = new FXMLLoader();
                 load.setLocation(getClass().getResource("/Fxml/cardClub.fxml"));
                 AnchorPane pane = load.load();
+
                 CardClubController cardC = load.getController();
                 cardC.setData(cardListData.get(q));
+                cardC.setHomeController(this); // Pass reference to HomeController
 
                 if(column == 2){
                     column = 0 ;
@@ -83,6 +98,16 @@ public class HomeController implements Initializable {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void showClubDetails(Club club) {
+        // Update the right panel with club details
+        home_club_infoName.setText(club.getClubName());
+        home_club_infoCategory.setText(club.getClubCategory());
+        home_club_infoMembers.setText(String.valueOf(club.getClubMembers()));
+        home_club_infoState.setText(club.getClubState());
+        home_club_infoDescription.setText(club.getClubDescription());
+        home_club_infoLogo.setImage(new Image(club.getClubImage()));
     }
 
 

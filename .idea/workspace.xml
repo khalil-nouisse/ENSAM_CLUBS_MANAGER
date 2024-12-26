@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="manager and about is set">
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="the logo of the clubs show in the home page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/model/Club.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/CardClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/CardClubController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/cardClub.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/cardClub.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/CardClubDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/CardClubDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" afterDir="false" />
     </list>
     <list id="8f596835-e831-4c37-b0b5-78c9290c276c" name="Changes by DELL" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +78,7 @@
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;new-home-page&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;integration-homePage&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Desktop/Home&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -163,6 +165,7 @@
       <workItem from="1735137138370" duration="9128000" />
       <workItem from="1735163003558" duration="9364000" />
       <workItem from="1735215121673" duration="1706000" />
+      <workItem from="1735227388210" duration="3377000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />

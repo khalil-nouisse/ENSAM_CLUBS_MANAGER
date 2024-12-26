@@ -88,6 +88,14 @@ public class Club {
         return clubDescription;
     }
 
+    public String getClubState() {
+        return clubState;
+    }
+
+    public int getMembersNumber() {
+        return MembersNumber;
+    }
+
     public ArrayList<String> getClubEvents() {
         return ClubEvent;
     }

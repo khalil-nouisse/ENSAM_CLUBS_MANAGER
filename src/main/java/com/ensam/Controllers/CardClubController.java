@@ -21,12 +21,27 @@ public class CardClubController implements Initializable {
     private Club club ;
     private Image image ;
 
+    private HomeController homeController;
+
     public void setData(Club club){
         this.club = club;
         card_clubName.setText(club.getClubName());
         String path = "File:" + club.getClubImage();
         image = new Image(path, 229, 150, false, true);
         card_club_logo.setImage(image);
+    }
+
+    // Method to set the reference to the HomeController
+    public void setHomeController(HomeController homeController) {
+        this.homeController = homeController;
+    }
+
+    // Method to handle card click
+    @FXML
+    private void onCardClick() {
+        if (homeController != null && club != null) {
+            homeController.showClubDetails(club); // Notify the HomeController
+        }
     }
 
     @Override
