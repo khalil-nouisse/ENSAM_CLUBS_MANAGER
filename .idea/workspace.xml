@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="USER HOME WORKING">
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="login as user , probleme in about page !">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/database/ClubMemberDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/AboutUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/AboutUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/User/HomeUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/User/HomeUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/User/UserAbout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/User/UserAbout.fxml" afterDir="false" />
     </list>
     <list id="8f596835-e831-4c37-b0b5-78c9290c276c" name="Changes by DELL" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +171,7 @@
       <workItem from="1735137138370" duration="9128000" />
       <workItem from="1735163003558" duration="9364000" />
       <workItem from="1735215121673" duration="1706000" />
-      <workItem from="1735227388210" duration="16959000" />
+      <workItem from="1735227388210" duration="18923000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -340,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735248752729</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="login as user , probleme in about page !">
+      <option name="closed" value="true" />
+      <created>1735249950745</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1735249950745</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +401,8 @@
     <MESSAGE value="the logo of the clubs show in the home page" />
     <MESSAGE value="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic" />
     <MESSAGE value="USER HOME WORKING" />
-    <option name="LAST_COMMIT_MESSAGE" value="USER HOME WORKING" />
+    <MESSAGE value="login as user , probleme in about page !" />
+    <option name="LAST_COMMIT_MESSAGE" value="login as user , probleme in about page !" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

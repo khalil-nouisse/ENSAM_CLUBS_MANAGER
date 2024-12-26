@@ -1,6 +1,7 @@
 package com.ensam.Controllers;
 
 import com.ensam.Backend.database.CLubDb;
+import com.ensam.Backend.database.ClubMemberDb;
 import com.ensam.Backend.model.Club;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -65,7 +66,8 @@ public class HomeController implements Initializable {
     CLubDb clubdb  = new CLubDb();
     Club club ;
     private ObservableList<Club> cardListData = clubdb.selectClubsFromDb();
-
+    ClubMemberDb clubmember = new ClubMemberDb();
+    Alert alert;
 
     public void menuDisplayCard(){
         cardListData.clear();
@@ -129,6 +131,25 @@ public class HomeController implements Initializable {
         AppUtils.navigateTo(event, "/Fxml/User/UserAbout.fxml", "About Page");
     }*/
 
+    public void JoinClubButton(ActionEvent event){
+
+        Boolean val;
+        val = clubmember.insertClubMember(AppUtils.Session.getLoggedInUsername(),home_club_infoName.getText());
+        if(val){        //joined club succesfully
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Succesfully Joined the club !");
+            alert.showAndWait();
+        }
+        else{   //couldn't join the club
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Couldn't join the Club !");
+            alert.showAndWait();
+        }
+    }
 
     private int col = 0;
     private int row = 0;
@@ -138,7 +159,5 @@ public class HomeController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         menuDisplayCard();
     }
-
-
 
 }

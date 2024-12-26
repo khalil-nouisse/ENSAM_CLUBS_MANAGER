@@ -78,7 +78,7 @@
                               </ImageView>
                               <AnchorPane layoutX="156.0" layoutY="92.0" prefHeight="650.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <AnchorPane fx:id="right_panel" layoutX="486.0" layoutY="19.0" prefHeight="501.0" prefWidth="203.0">
+                                    <AnchorPane fx:id="right_panel" layoutX="486.0" layoutY="19.0" prefHeight="616.0" prefWidth="252.0" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="16.0">
                                        <styleClass>
                                           <String fx:value="radius" />
                                           <String fx:value="shadow" />
@@ -146,9 +146,18 @@
                                           <Line endX="-100.0" endY="63.0" fill="WHITE" layoutX="142.0" layoutY="411.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
                                        </children>
                                     </AnchorPane>
+                                    <Button fx:id="JoinClub" layoutX="523.0" layoutY="536.0" mnemonicParsing="false" onAction="#JoinClubButton" prefHeight="54.0" prefWidth="182.0" styleClass="join-btn" text="JOIN CLUB">
+                                       <font>
+                                          <Font name="OCR A Extended" size="19.0" />
+                                       </font>
+                                       <stylesheets>
+                                          <URL value="@../../Styles/managerDesign.css" />
+                                          <URL value="@../../Styles/StyleHome.css" />
+                                       </stylesheets>
+                                    </Button>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="621.0" prefWidth="461.0">
+                              <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="621.0" prefWidth="461.0" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="16.0">
                                  <styleClass>
                                     <String fx:value="radius" />
                                     <String fx:value="shadow" />

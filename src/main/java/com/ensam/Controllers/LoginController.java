@@ -76,6 +76,7 @@ public class LoginController {
         else{
             try{
                 if(memberDb.LoginVerification(si_username.getText() , si_password.getText())){         //succesfull login
+                    AppUtils.Session.setLoggedInUsername(si_username.getText());
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
