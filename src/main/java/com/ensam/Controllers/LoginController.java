@@ -5,22 +5,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import com.ensam.Controllers.AppUtils;
 
-import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import javafx.event.ActionEvent;
 
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import com.ensam.Controllers.Admin.ManagerPageController;
@@ -115,7 +108,7 @@ public class LoginController {
                     }
                     else {   //login as a normal USER/MEMBER
                         // Load the MainInterface.fxml
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/HomeUser.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/User/HomeUser.fxml"));
                         Parent root = loader.load();
 
                         //Get the current stage from the event source

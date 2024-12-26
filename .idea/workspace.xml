@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic">
+    <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="USER HOME WORKING">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/AboutUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/User/UserAbout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AboutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/Admin/ManagerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/UserHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/AdminHome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/User/User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/HomeUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/StyleHome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/StyleHome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/HomeUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/User/HomeUser.fxml" afterDir="false" />
     </list>
     <list id="8f596835-e831-4c37-b0b5-78c9290c276c" name="Changes by DELL" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +23,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -100,6 +96,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\IT\PROJECTS\javaFx\Ensam_Clubs2\src\main\resources\Fxml\User" />
       <recent name="C:\Users\asus\Desktop\IT\PROJECTS\javaFx\Ensam_Clubs2\src\main\resources\Fxml\Admin" />
     </key>
   </component>
@@ -174,7 +171,7 @@
       <workItem from="1735137138370" duration="9128000" />
       <workItem from="1735163003558" duration="9364000" />
       <workItem from="1735215121673" duration="1706000" />
-      <workItem from="1735227388210" duration="12939000" />
+      <workItem from="1735227388210" duration="14425000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -320,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735236259596</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="USER HOME WORKING">
+      <option name="closed" value="true" />
+      <created>1735246147740</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1735246147740</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +376,8 @@
     <MESSAGE value="manager and about is set" />
     <MESSAGE value="the logo of the clubs show in the home page" />
     <MESSAGE value="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic" />
-    <option name="LAST_COMMIT_MESSAGE" value="the logo of the clubs show in the home page , so as the club information on the right panel work dynamic" />
+    <MESSAGE value="USER HOME WORKING" />
+    <option name="LAST_COMMIT_MESSAGE" value="USER HOME WORKING" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
