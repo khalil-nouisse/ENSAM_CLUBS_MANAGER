@@ -26,7 +26,7 @@
                      <children>
                         <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="229.0" fitWidth="225.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Images/logo_ade1.png" />
                                  </image>
@@ -39,12 +39,12 @@
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
                               </Button>
-                              <Label layoutX="24.0" layoutY="234.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
+                              <Label layoutX="26.0" layoutY="239.0" prefHeight="60.0" prefWidth="211.0" text="CLUBS MANAGER" textAlignment="CENTER" textFill="WHITE">
                                  <font>
-                                    <Font name="Roboto Bold" size="25.0" />
+                                    <Font name="Poppins Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="52.0" layoutY="215.0" text="ENSAM MEKNES" textFill="WHITE">
+                              <Label layoutX="55.0" layoutY="218.0" text="ENSAM MEKNES" textFill="WHITE">
                                  <font>
                                     <Font name="Dubai Light" size="21.0" />
                                  </font>
@@ -136,16 +136,16 @@
                                        </font>
                                     </Label>
                                     <TextField fx:id="manager_add_clubDescription" layoutX="134.0" layoutY="167.0" prefHeight="25.0" prefWidth="231.0" />
-                                    <AnchorPane layoutX="392.0" layoutY="49.0" prefHeight="57.0" prefWidth="60.0" stylesheets="@../../Styles/managerDesign.css">
+                                    <AnchorPane layoutX="388.0" layoutY="49.0" prefHeight="114.0" prefWidth="111.0" stylesheets="@../../Styles/managerDesign.css">
                                        <styleClass>
                                           <String fx:value="white-bg" />
                                           <String fx:value="shadow" />
                                        </styleClass>
                                        <children>
-                                          <ImageView fx:id="manager_add_image" fitHeight="111.0" fitWidth="111.0" layoutX="-2.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="manager_add_image" fitHeight="115.0" fitWidth="123.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true" />
                                        </children>
                                     </AnchorPane>
-                                    <Button fx:id="manager_importBtn" layoutX="413.0" layoutY="166.0" mnemonicParsing="false" onAction="#managerImportBtn" prefHeight="19.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="import" />
+                                    <Button fx:id="manager_importBtn" layoutX="412.0" layoutY="174.0" mnemonicParsing="false" onAction="#managerImportBtn" prefHeight="28.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="import" />
                                     <Button fx:id="manager_addBtn" layoutX="607.0" layoutY="44.0" mnemonicParsing="false" onAction="#managerAddClub" prefHeight="135.0" prefWidth="63.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="ADD">
                                        <font>
                                           <Font name="Eras Bold ITC" size="45.0" />

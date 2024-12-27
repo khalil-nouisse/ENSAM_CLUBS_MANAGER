@@ -10,21 +10,21 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onCardClick" prefHeight="180.0" prefWidth="205.0" stylesheets="@../Styles/CardClubDesign.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensam.Controllers.CardClubController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onCardClick" prefHeight="230.0" prefWidth="205.0" stylesheets="@../Styles/CardClubDesign.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensam.Controllers.CardClubController">
    <children>
-      <VBox layoutY="1.0" prefHeight="180.0" prefWidth="205.0" stylesheets="@../Styles/CardClubDesign.css" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+      <VBox layoutY="1.0" prefHeight="265.0" prefWidth="205.0" stylesheets="@../Styles/CardClubDesign.css" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
          <children>
             <HBox prefHeight="34.0" prefWidth="230.0">
                <children>
                   <Label fx:id="card_clubName" alignment="CENTER" prefHeight="43.0" prefWidth="231.0" text="CLUB" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="OCR A Extended" size="26.0" />
+                        <Font name="Roboto Bold" size="25.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
             <Line endX="101.87867736816406" endY="0.36531758308410645" fill="WHITE" startX="-100.0" startY="0.3651474714279175" stroke="WHITE" strokeWidth="3.0" styleClass="background" />
-            <ImageView fx:id="card_club_logo" fitHeight="119.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="card_club_logo" fitHeight="171.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
                   <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
                </VBox.margin>

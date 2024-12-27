@@ -16,12 +16,12 @@
 }
 
 .background{
-    -fx-background-color: #1a7188;
+    -fx-background-color: linear-gradient(to bottom right , #608AA8 , #3A5366);
     -fx-cursor: hand;
 
 }
 .border {
-    -fx-border-color: #b5dbff;
+    -fx-border-color: #ffffff;
     -fx-border-width: 3;
 
 }

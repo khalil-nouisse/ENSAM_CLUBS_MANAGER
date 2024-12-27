@@ -97,7 +97,7 @@ public class ManagerPageController implements Initializable {
     private  Image image;
     HomeController homeController ;
     // category list in the manager page !
-    String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation"};
+    String []categoryList = {"Technical" , "Art & Culture" , "Entrepreneurship" , "Creation" , "Sociale"};
     public void setManager_club_category(){
 
         List<String> categoryL = new ArrayList<>() ;
@@ -198,7 +198,7 @@ public class ManagerPageController implements Initializable {
         File file  = openFile.showOpenDialog(main_form.getScene().getWindow());
         if(file != null){
             data.path = file.getAbsolutePath();
-            image = new Image(file.toURI().toString(), 120, 127, false, true);
+            image = new Image(file.toURI().toString(), 123, 115, false, true);
 
             manager_add_image.setImage(image);
         }

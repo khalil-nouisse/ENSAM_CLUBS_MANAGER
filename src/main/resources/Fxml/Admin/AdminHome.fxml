@@ -26,7 +26,7 @@
                      <children>
                         <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="20.0">
                                  <image>
                                     <Image url="@../../Images/logo_ade1.png" />
                                  </image>
@@ -39,12 +39,12 @@
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
                               </Button>
-                              <Label layoutX="24.0" layoutY="234.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
+                              <Label layoutX="24.0" layoutY="239.0" prefHeight="60.0" prefWidth="214.0" text="CLUBS MANAGER" textFill="WHITE" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0">
                                  <font>
-                                    <Font name="Roboto Bold" size="25.0" />
+                                    <Font name="Poppins Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="52.0" layoutY="215.0" text="ENSAM MEKNES" textFill="WHITE">
+                              <Label layoutX="55.0" layoutY="218.0" prefHeight="38.0" prefWidth="157.0" text="ENSAM MEKNES" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="56.0">
                                  <font>
                                     <Font name="Dubai Light" size="21.0" />
                                  </font>
@@ -96,59 +96,59 @@
                                           <URL value="@../../Styles/StyleHome.css" />
                                        </stylesheets>
                                        <children>
-                                          <ImageView fx:id="home_club_infoLogo" fitHeight="186.0" fitWidth="186.0" layoutX="33.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="32.0" />
-                                          <Label layoutX="19.0" layoutY="253.0" prefHeight="27.0" prefWidth="102.0" text="Name        :" textFill="WHITE" AnchorPane.leftAnchor="21.0">
+                                          <ImageView fx:id="home_club_infoLogo" fitHeight="186.0" fitWidth="186.0" layoutX="27.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="56.0" />
+                                          <Label layoutX="20.0" layoutY="253.0" prefHeight="27.0" prefWidth="124.0" text="Name           :" textFill="#00020a" AnchorPane.leftAnchor="20.0">
                                              <font>
-                                                <Font name="Roboto Medium" size="18.0" />
+                                                <Font name="Roboto Bold" size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="21.0" layoutY="282.0" prefHeight="27.0" prefWidth="102.0" text="Category  :" textFill="WHITE" AnchorPane.leftAnchor="21.0">
+                                          <Label layoutX="21.0" layoutY="282.0" prefHeight="27.0" prefWidth="124.0" text="Category     :" textFill="#00020a" AnchorPane.leftAnchor="21.0">
                                              <font>
-                                                <Font name="Roboto Medium" size="18.0" />
+                                                <Font name="Roboto Bold" size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="18.0" layoutY="314.0" prefHeight="27.0" prefWidth="102.0" text="Members :" textFill="WHITE" AnchorPane.leftAnchor="21.0">
+                                          <Label layoutX="19.0" layoutY="314.0" prefHeight="27.0" prefWidth="124.0" text="Members     :" textFill="#00020a" AnchorPane.leftAnchor="19.0">
                                              <font>
-                                                <Font name="Roboto Medium" size="18.0" />
+                                                <Font name="Roboto Bold" size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="21.0" layoutY="346.0" prefHeight="27.0" prefWidth="102.0" text="State         :" textFill="WHITE" AnchorPane.leftAnchor="21.0">
+                                          <Label layoutX="21.0" layoutY="346.0" prefHeight="27.0" prefWidth="126.0" text="State            :" textFill="#00020a" AnchorPane.leftAnchor="21.0">
                                              <font>
-                                                <Font name="Roboto Medium" size="18.0" />
+                                                <Font name="Roboto Bold" size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="21.0" layoutY="378.0" prefHeight="27.0" prefWidth="102.0" text="Description :" textFill="WHITE" AnchorPane.leftAnchor="21.0">
+                                          <Label layoutX="21.0" layoutY="378.0" prefHeight="27.0" prefWidth="118.0" text="Description :" textFill="#00020a" AnchorPane.leftAnchor="21.0">
                                              <font>
-                                                <Font name="Roboto Medium" size="18.0" />
+                                                <Font name="Roboto Bold" size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="home_club_infoName" layoutX="123.0" layoutY="257.0" prefHeight="17.0" prefWidth="120.0" textFill="WHITE" AnchorPane.leftAnchor="123.0">
-                                             <font>
-                                                <Font name="Roboto" size="16.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="home_club_infoCategory" layoutX="120.0" layoutY="284.0" prefHeight="17.0" prefWidth="120.0" textFill="WHITE" AnchorPane.leftAnchor="123.0">
+                                          <Label fx:id="home_club_infoName" layoutX="131.0" layoutY="257.0" prefHeight="20.0" prefWidth="110.0" textFill="WHITE" AnchorPane.leftAnchor="131.0">
                                              <font>
                                                 <Font name="Roboto" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="home_club_infoMembers" layoutX="113.0" layoutY="317.0" prefHeight="17.0" prefWidth="120.0" textFill="WHITE" AnchorPane.leftAnchor="123.0">
+                                          <Label fx:id="home_club_infoCategory" layoutX="120.0" layoutY="284.0" prefHeight="20.0" prefWidth="111.0" textFill="WHITE" AnchorPane.leftAnchor="131.0">
                                              <font>
                                                 <Font name="Roboto" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="home_club_infoState" layoutX="112.0" layoutY="348.0" prefHeight="17.0" prefWidth="120.0" textFill="WHITE" AnchorPane.leftAnchor="123.0">
+                                          <Label fx:id="home_club_infoMembers" layoutX="113.0" layoutY="317.0" prefHeight="20.0" prefWidth="107.0" textFill="WHITE" AnchorPane.leftAnchor="131.0">
                                              <font>
                                                 <Font name="Roboto" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="home_club_infoDescription" alignment="TOP_LEFT" layoutX="53.0" layoutY="410.0" prefHeight="78.0" prefWidth="174.0" textFill="WHITE">
+                                          <Label fx:id="home_club_infoState" layoutX="140.0" layoutY="348.0" prefHeight="20.0" prefWidth="99.0" textFill="WHITE" AnchorPane.leftAnchor="131.0">
                                              <font>
                                                 <Font name="Roboto" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Line endX="56.66667175292969" fill="WHITE" layoutX="144.0" layoutY="242.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-                                          <Line endX="-100.0" endY="63.0" fill="WHITE" layoutX="142.0" layoutY="411.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+                                          <Label fx:id="home_club_infoDescription" alignment="TOP_LEFT" layoutX="53.0" layoutY="410.0" prefHeight="68.0" prefWidth="174.0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Roboto" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="85.0" fill="WHITE" layoutX="144.0" layoutY="237.0" startX="-117.0" stroke="WHITE" strokeWidth="5.0" />
+                                          <Line endX="-100.0" endY="66.66665649414062" fill="WHITE" layoutX="142.0" layoutY="411.0" startX="-100.0" strokeWidth="2.0" />
                                        </children>
                                     </AnchorPane>
                                  </children>

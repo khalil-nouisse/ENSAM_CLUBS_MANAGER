@@ -33,3 +33,7 @@
     -fx-border-width: 2px;
 
 }
+
+.text{
+    -fx-text-fill: black;
+}

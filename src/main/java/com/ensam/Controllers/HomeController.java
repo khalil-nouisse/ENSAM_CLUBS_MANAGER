@@ -109,6 +109,7 @@ public class HomeController implements Initializable {
         home_club_infoMembers.setText(String.valueOf(club.getClubMembers()));
         home_club_infoState.setText(club.getClubState());
         home_club_infoDescription.setText(club.getClubDescription());
+        home_club_infoDescription.setWrapText(true);
         home_club_infoLogo.setImage(new Image(club.getClubImage()));
     }
 
