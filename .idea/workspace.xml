@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="ALL SET">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/AboutUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/User/AboutUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/About.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/About.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/AdminHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/AdminHome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/managerPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/User/HomeUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/User/HomeUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/User/UserAbout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/User/UserAbout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/StyleHome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/StyleHome.css" afterDir="false" />
     </list>
     <list id="8f596835-e831-4c37-b0b5-78c9290c276c" name="Changes by DELL" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +166,7 @@
       <workItem from="1735137138370" duration="9128000" />
       <workItem from="1735163003558" duration="9364000" />
       <workItem from="1735215121673" duration="1706000" />
-      <workItem from="1735227388210" duration="31520000" />
+      <workItem from="1735227388210" duration="32302000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -369,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735261882874</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ALL SET">
+      <option name="closed" value="true" />
+      <created>1735266664910</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1735266664910</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
