@@ -32,6 +32,6 @@ module com.example.ensam_clubs2 {
     opens com.ensam.Controllers to javafx.fxml;
     opens com.ensam.Backend.model to javafx.base;
     opens com.ensam.Backend.database to javafx.base;
-
+    opens com.ensam.Controllers.User to javafx.fxml;
     exports com.ensam;
 }

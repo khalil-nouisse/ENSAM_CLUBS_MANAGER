@@ -26,27 +26,14 @@
                      <children>
                         <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ImageView fitHeight="229.0" fitWidth="225.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../Images/logo_ade1.png" />
-                                 </image>
-                                 <effect>
-                                    <Glow level="0.5" />
-                                 </effect>
-                              </ImageView>
                               <Button fx:id="home_btn" layoutX="31.0" layoutY="350.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="Home" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="350.0">
                                  <font>
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
                               </Button>
-                              <Label layoutX="26.0" layoutY="239.0" prefHeight="60.0" prefWidth="211.0" text="CLUBS MANAGER" textAlignment="CENTER" textFill="WHITE">
+                              <Label layoutX="58.0" layoutY="218.0" text="ENSAM MEKNES" textFill="WHITE" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="218.0">
                                  <font>
-                                    <Font name="Poppins Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="55.0" layoutY="218.0" text="ENSAM MEKNES" textFill="WHITE">
-                                 <font>
-                                    <Font name="Dubai Light" size="21.0" />
+                                    <Font name="Dubai Light" size="19.0" />
                                  </font>
                               </Label>
                               <Line endX="56.66667175292969" fill="WHITE" layoutX="151.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
@@ -66,8 +53,21 @@
                                     <Image url="@../../Images/logout2.png" />
                                  </image>
                               </ImageView>
+                              <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="7.0">
+                                 <image>
+                                    <Image url="@../../Images/logo_ade1.png" />
+                                 </image>
+                                 <effect>
+                                    <Glow level="0.5" />
+                                 </effect>
+                              </ImageView>
                            </children>
                         </AnchorPane>
+                        <Label layoutX="34.0" layoutY="243.0" prefHeight="73.0" prefWidth="211.0" stylesheets="@../../Styles/StyleHome.css" text="CLUBS MANAGER" textFill="WHITE" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="233.0">
+                           <font>
+                              <Font name="Eras Bold ITC" size="22.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </left>

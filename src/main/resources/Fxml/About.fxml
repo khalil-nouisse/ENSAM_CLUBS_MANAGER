@@ -28,7 +28,7 @@
                                     <Image url="@../Images/1ba77a4b398069aa6b367f58fb76f54a.jpg" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="7.0">
                                  <image>
                                     <Image url="@../Images/logo_ade1.png" />
                                  </image>
@@ -41,14 +41,9 @@
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
                               </Button>
-                              <Label layoutX="24.0" layoutY="236.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
+                              <Label layoutX="58.0" layoutY="218.0" text="ENSAM MEKNES" textFill="WHITE" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="218.0">
                                  <font>
-                                    <Font name="Roboto Bold" size="25.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="52.0" layoutY="215.0" text="ENSAM MEKNES" textFill="WHITE">
-                                 <font>
-                                    <Font name="Dubai Light" size="21.0" />
+                                    <Font name="Dubai Light" size="19.0" />
                                  </font>
                               </Label>
                               <Line endX="56.66667175292969" fill="WHITE" layoutX="150.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
@@ -68,6 +63,11 @@
                                     <Image url="@../Images/logout2.png" />
                                  </image>
                               </ImageView>
+                              <Label layoutX="-18.0" layoutY="236.0" prefHeight="73.0" prefWidth="211.0" stylesheets="@../Styles/StyleHome.css" text="CLUBS MANAGER" textFill="WHITE" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="233.0">
+                                 <font>
+                                    <Font name="Eras Bold ITC" size="22.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
                      </children>

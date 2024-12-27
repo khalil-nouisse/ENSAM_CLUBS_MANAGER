@@ -12,7 +12,7 @@ public class AboutUserController {
     private Button about_btnUser;
 
     @FXML
-    private Button home_btn;
+    private Button home_btnUser;
 
     @FXML
     private AnchorPane main_form;
@@ -21,7 +21,8 @@ public class AboutUserController {
     private AnchorPane manager_form;
 
     @FXML
-    private Button signout_btn;
+    private Button signout_btnAbt;
+
 
     public void logoutUser(ActionEvent event){
         AppUtils.logout(event);
@@ -29,7 +30,7 @@ public class AboutUserController {
 
     @FXML
     private void goToHomeUser(ActionEvent event) {
-        AppUtils.navigateTo(event, "/Fxml/User/UserHomeController.fxml", "Home Page");
+        AppUtils.navigateTo(event, "/Fxml/User/HomeUser.fxml", "Home Page");
     }
 
     public void initialize() {

@@ -10,12 +10,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -62,6 +65,9 @@ public class HomeController implements Initializable {
 
     @FXML
     private Button signout_btn;
+
+    @FXML
+    private Button UserAboutBtn;
 
     CLubDb clubdb  = new CLubDb();
     Club club ;
@@ -127,10 +133,12 @@ public class HomeController implements Initializable {
     private void goToAbout(ActionEvent event) {
         AppUtils.navigateTo(event, "/Fxml/About.fxml", "About Page");
     }
-    /*@FXML
+
+    @FXML
     private void goToAboutUser(ActionEvent event) {
         AppUtils.navigateTo(event, "/Fxml/User/UserAbout.fxml", "About Page");
-    }*/
+    }
+
 
     public void JoinClubButton(ActionEvent event){
 
@@ -142,6 +150,9 @@ public class HomeController implements Initializable {
             alert.setHeaderText(null);
             alert.setContentText("Succesfully Joined the club !");
             alert.showAndWait();
+
+            //add one member to members
+
         }
         else{   //couldn't join the club
             alert = new Alert(Alert.AlertType.ERROR);
@@ -159,6 +170,7 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         menuDisplayCard();
+        home_btn.setDisable(true);
     }
 
 }

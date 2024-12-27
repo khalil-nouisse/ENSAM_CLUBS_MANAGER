@@ -21,26 +21,21 @@
                <left>
                   <AnchorPane prefHeight="650.0" prefWidth="251.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane layoutX="26.0" layoutY="189.0" prefHeight="650.0" prefWidth="262.0" styleClass="nav-form" stylesheets="@../../Styles/managerDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <ImageView fitHeight="643.0" fitWidth="255.0" layoutX="-2.0" layoutY="5.0" opacity="0.06" visible="false">
                                  <image>
                                     <Image url="@../../Images/1ba77a4b398069aa6b367f58fb76f54a.jpg" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="home_btn" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" onAction="#goToHomeUser" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="Home" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="384.0">
+                              <Button fx:id="home_btnUser" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" onAction="#goToHomeUser" prefHeight="39.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@../../Styles/managerDesign.css" text="Home" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="384.0">
                                  <font>
                                     <Font name="Eras Medium ITC" size="21.0" />
                                  </font>
                               </Button>
-                              <Label layoutX="24.0" layoutY="236.0" prefHeight="60.0" prefWidth="208.0" text="CLUBS MANAGER" textFill="WHITE">
+                              <Label layoutX="52.0" layoutY="215.0" prefHeight="35.0" prefWidth="150.0" text="ENSAM MEKNES" textFill="WHITE" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="218.0">
                                  <font>
-                                    <Font name="Roboto Bold" size="25.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="52.0" layoutY="215.0" text="ENSAM MEKNES" textFill="WHITE">
-                                 <font>
-                                    <Font name="Dubai Light" size="21.0" />
+                                    <Font name="Dubai Light" size="19.0" />
                                  </font>
                               </Label>
                               <Line endX="56.66667175292969" fill="WHITE" layoutX="150.0" layoutY="297.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
@@ -49,15 +44,20 @@
                                     <Font name="Eras Medium ITC" size="19.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="signout_btn" layoutX="58.0" layoutY="572.0" mnemonicParsing="false" onAction="#logoutUser" prefHeight="27.0" prefWidth="126.0" styleClass="logout" stylesheets="@../../Styles/managerDesign.css" text="     Sign out" AnchorPane.rightAnchor="78.0" />
-                              <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="69.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="165.0">
+                              <Button fx:id="signout_btnAbt" layoutX="74.0" layoutY="498.0" mnemonicParsing="false" onAction="#logoutUser" prefHeight="27.0" prefWidth="132.0" styleClass="logout" stylesheets="@../../Styles/managerDesign.css" text="     Sign out" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="72.0" />
+                              <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="69.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="165.0">
                                  <image>
                                     <Image url="@../../Images/logout2.png" />
                                  </image>
                               </ImageView>
+                              <Label layoutX="13.0" layoutY="234.0" prefHeight="73.0" prefWidth="216.0" stylesheets="@../../Styles/StyleHome.css" text="CLUBS MANAGER" textFill="WHITE" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="234.0">
+                                 <font>
+                                    <Font name="Eras Bold ITC" size="22.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
-                        <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="229.0" fitWidth="229.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="5.0">
                            <image>
                               <Image url="@../../Images/logo_ade1.png" />
                            </image>
