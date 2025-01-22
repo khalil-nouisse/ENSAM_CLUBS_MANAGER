@@ -44,7 +44,6 @@ public class AppUtils {
                 currentStage.setMinHeight(400);
                 currentStage.setMaxWidth(600);
                 currentStage.setMaxHeight(400);
-
                 // Show the updated stage
                 currentStage.show();
             }

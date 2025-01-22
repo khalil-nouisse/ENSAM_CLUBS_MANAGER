@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ca16d769-f10e-4f8f-83cf-2956064e2b47" name="Changes" comment="ALL SET">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/manager/ClubManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Backend/manager/ClubManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/AppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/CardClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ensam/Controllers/CardClubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/cardClub.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/cardClub.fxml" afterDir="false" />
     </list>
     <list id="8f596835-e831-4c37-b0b5-78c9290c276c" name="Changes by DELL" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +79,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "User-about",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/asus/Desktop/Home",
+    "last_opened_file_path": "C:/Users/asus/Desktop/IT/PROJECTS/javaFx/JAVA_project1",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -166,7 +170,22 @@
       <workItem from="1735137138370" duration="9128000" />
       <workItem from="1735163003558" duration="9364000" />
       <workItem from="1735215121673" duration="1706000" />
-      <workItem from="1735227388210" duration="32302000" />
+      <workItem from="1735227388210" duration="32316000" />
+      <workItem from="1735286592496" duration="3946000" />
+      <workItem from="1735293300540" duration="157000" />
+      <workItem from="1735338135501" duration="909000" />
+      <workItem from="1735376376397" duration="3049000" />
+      <workItem from="1735422476212" duration="24000" />
+      <workItem from="1735452101156" duration="295000" />
+      <workItem from="1735467711980" duration="353000" />
+      <workItem from="1735771769949" duration="791000" />
+      <workItem from="1735894864322" duration="3000" />
+      <workItem from="1736452068165" duration="2466000" />
+      <workItem from="1736577757558" duration="2000" />
+      <workItem from="1736973183937" duration="137000" />
+      <workItem from="1737171526573" duration="2063000" />
+      <workItem from="1737395867701" duration="2000" />
+      <workItem from="1737516382465" duration="2219000" />
     </task>
     <task id="LOCAL-00001" summary="first commit : login/register and manager controll and database all set">
       <option name="closed" value="true" />
@@ -368,7 +387,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735266664910</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="ALL SET">
+      <option name="closed" value="true" />
+      <created>1735267694658</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1735267694658</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +459,11 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ensam/Backend/manager/ClubManager.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

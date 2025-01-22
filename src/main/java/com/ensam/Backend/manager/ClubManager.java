@@ -9,7 +9,6 @@ public class  ClubManager {
 
     //getters and setters :
 
-
     public int getNumCLubs() {
         return numCLubs;
     }
@@ -73,15 +72,7 @@ public class  ClubManager {
 
         return true ;
     }
-    /*public void deleteClubByName(String clubName){
-        int index = getClubIndex(clubName) ;
-        club[index] = null ;
-        numCLubs-- ;
-        getClub(clubName).setClubId(numCLubs);
-        for ( int i = index ; i < numCLubs ; i++ ){
-            club[i] = club[i+1] ;
-        }
-    }*/
+
     public void deleteClubByName(String clubName){
         int index = getClubIndex(clubName);
         if(index >= 0){
@@ -97,12 +88,6 @@ public class  ClubManager {
 
         }
     }
-    /*public void updateCLubMembers(String clubName , int numMembers){
-        int index = getClubIndex(clubName);
-        if(index != 0){
-            getClub(clubName).setClubMembers(numMembers);
-        }
-    }*/
 
 }
 

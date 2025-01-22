@@ -27,7 +27,7 @@ public class CardClubController implements Initializable {
         this.club = club;
         card_clubName.setText(club.getClubName());
         String path = "File:" + club.getClubImage();
-        image = new Image(path, 170, 150, false, true);
+        image = new Image(path, 186, 179, false, true);
         card_club_logo.setImage(image);
     }
 
